@@ -1,0 +1,39 @@
+﻿OFFICIAL RECEIPT
+Coffee Project
+Tue May 29 23:00:47 CST 2018
+Order:
+Qty   Item                                        Price
+1    Grande Cafè Latte           145
+
+OFFICIAL RECEIPT
+Coffee Project
+Tue May 29 23:01:04 CST 2018
+Order:
+Qty   Item                                        Price
+1    Grande Cafè Americano           135
+2    Grande Caramel Latte           340
+
+OFFICIAL RECEIPT
+Coffee Project
+Wed May 30 00:34:36 CST 2018
+Order:
+Qty   Item                                        Price
+1    Tall Cafè Americano           120
+
+OFFICIAL RECEIPT
+Coffee Project
+Wed May 30 00:35:43 CST 2018
+Order:
+Qty   Item                                        Price
+1    Tall Cafè Americano           120
+1    Grande Cafè Americano           135
+1    Grande Cappuccino           145
+
+OFFICIAL RECEIPT
+Coffee Project
+Wed May 30 00:59:27 CST 2018
+Order:
+Qty   Item                                        Price
+2    Tall Cafè Americano           240
+1    Grande Cafè Americano           135
+
