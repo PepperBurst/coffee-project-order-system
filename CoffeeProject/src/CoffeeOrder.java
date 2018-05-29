@@ -132,7 +132,91 @@ public class CoffeeOrder extends javax.swing.JFrame {
         pwd_confirm = new javax.swing.JPasswordField();
         btn_admin_pwdChange = new javax.swing.JButton();
         btn_admin_confirmPwd = new javax.swing.JButton();
-        jPanel1 = new javax.swing.JPanel();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        pnl_admin_inventory = new javax.swing.JPanel();
+        btn_inv_c1 = new javax.swing.JButton();
+        jLabel8 = new javax.swing.JLabel();
+        jLabel9 = new javax.swing.JLabel();
+        jLabel10 = new javax.swing.JLabel();
+        jLabel11 = new javax.swing.JLabel();
+        jLabel12 = new javax.swing.JLabel();
+        spn_stock_c1t = new javax.swing.JSpinner();
+        lbl_stock_c1t = new javax.swing.JLabel();
+        lbl_price_c1t = new javax.swing.JLabel();
+        btn_restock_c1t = new javax.swing.JButton();
+        spn_price_c1t = new javax.swing.JSpinner();
+        btn_reprice_c1t = new javax.swing.JButton();
+        btn_restock_c1g = new javax.swing.JButton();
+        spn_stock_c1g = new javax.swing.JSpinner();
+        btn_reprice_c1g = new javax.swing.JButton();
+        spn_price_c1g = new javax.swing.JSpinner();
+        lbl_price_c1g = new javax.swing.JLabel();
+        lbl_stock_c1g = new javax.swing.JLabel();
+        btn_inv_c2 = new javax.swing.JButton();
+        jLabel13 = new javax.swing.JLabel();
+        jLabel14 = new javax.swing.JLabel();
+        btn_restock_c2g = new javax.swing.JButton();
+        btn_restock_c2t = new javax.swing.JButton();
+        spn_stock_c2t = new javax.swing.JSpinner();
+        lbl_stock_c2t = new javax.swing.JLabel();
+        spn_stock_c2g = new javax.swing.JSpinner();
+        lbl_stock_c2g = new javax.swing.JLabel();
+        btn_reprice_c2g = new javax.swing.JButton();
+        spn_price_c2g = new javax.swing.JSpinner();
+        lbl_price_c2g = new javax.swing.JLabel();
+        spn_price_c2t = new javax.swing.JSpinner();
+        btn_reprice_c2t = new javax.swing.JButton();
+        lbl_price_c2t = new javax.swing.JLabel();
+        lbl_iconInv_c2 = new javax.swing.JLabel();
+        lbl_iconInv_c1 = new javax.swing.JLabel();
+        btn_reprice_c3g = new javax.swing.JButton();
+        spn_price_c3g = new javax.swing.JSpinner();
+        lbl_price_c3g = new javax.swing.JLabel();
+        spn_price_c3t = new javax.swing.JSpinner();
+        btn_reprice_c3t = new javax.swing.JButton();
+        lbl_price_c3t = new javax.swing.JLabel();
+        lbl_stock_c3t = new javax.swing.JLabel();
+        spn_stock_c3t = new javax.swing.JSpinner();
+        btn_restock_c3t = new javax.swing.JButton();
+        lbl_stock_c3g = new javax.swing.JLabel();
+        spn_stock_c3g = new javax.swing.JSpinner();
+        btn_restock_c3g = new javax.swing.JButton();
+        jLabel15 = new javax.swing.JLabel();
+        lbl_iconInv_c3 = new javax.swing.JLabel();
+        jLabel16 = new javax.swing.JLabel();
+        btn_inv_c3 = new javax.swing.JButton();
+        btn_inv_c4 = new javax.swing.JButton();
+        jLabel17 = new javax.swing.JLabel();
+        jLabel18 = new javax.swing.JLabel();
+        lbl_iconInv_c4 = new javax.swing.JLabel();
+        btn_restock_c4t = new javax.swing.JButton();
+        btn_restock_c4g = new javax.swing.JButton();
+        spn_stock_c4g = new javax.swing.JSpinner();
+        lbl_stock_c4g = new javax.swing.JLabel();
+        spn_stock_c4t = new javax.swing.JSpinner();
+        lbl_stock_c4t = new javax.swing.JLabel();
+        btn_reprice_c4t = new javax.swing.JButton();
+        spn_price_c4t = new javax.swing.JSpinner();
+        lbl_price_c4t = new javax.swing.JLabel();
+        lbl_price_c4g = new javax.swing.JLabel();
+        spn_price_c4g = new javax.swing.JSpinner();
+        btn_reprice_c4g = new javax.swing.JButton();
+        spn_price_c5g = new javax.swing.JSpinner();
+        lbl_price_c5g = new javax.swing.JLabel();
+        btn_reprice_c5g = new javax.swing.JButton();
+        spn_stock_c5g = new javax.swing.JSpinner();
+        btn_restock_c5g = new javax.swing.JButton();
+        lbl_stock_c5g = new javax.swing.JLabel();
+        spn_stock_c5t = new javax.swing.JSpinner();
+        btn_restock_c5t = new javax.swing.JButton();
+        lbl_stock_c5t = new javax.swing.JLabel();
+        spn_price_c5t = new javax.swing.JSpinner();
+        btn_reprice_c5t = new javax.swing.JButton();
+        lbl_price_c5t = new javax.swing.JLabel();
+        lbl_iconInv_c5 = new javax.swing.JLabel();
+        jLabel19 = new javax.swing.JLabel();
+        jLabel20 = new javax.swing.JLabel();
+        btn_inv_c5 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMaximumSize(new java.awt.Dimension(848, 480));
@@ -842,20 +926,787 @@ public class CoffeeOrder extends javax.swing.JFrame {
 
         jTabbedPane2.addTab("Main", pnl_admin_main);
 
-        jPanel1.setBackground(new java.awt.Color(0, 0, 0));
+        jScrollPane2.setBackground(new java.awt.Color(0, 0, 0));
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 799, Short.MAX_VALUE)
+        pnl_admin_inventory.setBackground(new java.awt.Color(0, 0, 0));
+
+        btn_inv_c1.setBackground(new java.awt.Color(0, 0, 0));
+        btn_inv_c1.setFont(new java.awt.Font("Arial", 0, 36)); // NOI18N
+        btn_inv_c1.setForeground(new java.awt.Color(255, 255, 255));
+        btn_inv_c1.setText("Cafè Americana");
+        btn_inv_c1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_inv_c1ActionPerformed(evt);
+            }
+        });
+
+        jLabel8.setBackground(new java.awt.Color(0, 0, 0));
+        jLabel8.setFont(new java.awt.Font("Arial", 0, 36)); // NOI18N
+        jLabel8.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel8.setText("Products");
+
+        jLabel9.setBackground(new java.awt.Color(0, 0, 0));
+        jLabel9.setFont(new java.awt.Font("Arial", 0, 36)); // NOI18N
+        jLabel9.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel9.setText("Stock");
+
+        jLabel10.setBackground(new java.awt.Color(0, 0, 0));
+        jLabel10.setFont(new java.awt.Font("Arial", 0, 36)); // NOI18N
+        jLabel10.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel10.setText("Price");
+
+        jLabel11.setBackground(new java.awt.Color(0, 0, 0));
+        jLabel11.setFont(new java.awt.Font("Arial", 0, 36)); // NOI18N
+        jLabel11.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel11.setText("Tall");
+
+        jLabel12.setBackground(new java.awt.Color(0, 0, 0));
+        jLabel12.setFont(new java.awt.Font("Arial", 0, 36)); // NOI18N
+        jLabel12.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel12.setText("Grande");
+
+        spn_stock_c1t.setFont(new java.awt.Font("Arial", 0, 36)); // NOI18N
+        spn_stock_c1t.setEnabled(false);
+
+        lbl_stock_c1t.setBackground(new java.awt.Color(0, 0, 0));
+        lbl_stock_c1t.setFont(new java.awt.Font("Arial", 0, 36)); // NOI18N
+        lbl_stock_c1t.setForeground(new java.awt.Color(255, 255, 255));
+        lbl_stock_c1t.setText("0");
+
+        lbl_price_c1t.setBackground(new java.awt.Color(0, 0, 0));
+        lbl_price_c1t.setFont(new java.awt.Font("Arial", 0, 36)); // NOI18N
+        lbl_price_c1t.setForeground(new java.awt.Color(255, 255, 255));
+        lbl_price_c1t.setText("0");
+
+        btn_restock_c1t.setBackground(new java.awt.Color(0, 0, 0));
+        btn_restock_c1t.setFont(new java.awt.Font("Arial", 0, 36)); // NOI18N
+        btn_restock_c1t.setForeground(new java.awt.Color(255, 255, 255));
+        btn_restock_c1t.setText("Restock");
+        btn_restock_c1t.setEnabled(false);
+
+        spn_price_c1t.setFont(new java.awt.Font("Arial", 0, 36)); // NOI18N
+        spn_price_c1t.setEnabled(false);
+
+        btn_reprice_c1t.setBackground(new java.awt.Color(0, 0, 0));
+        btn_reprice_c1t.setFont(new java.awt.Font("Arial", 0, 36)); // NOI18N
+        btn_reprice_c1t.setForeground(new java.awt.Color(255, 255, 255));
+        btn_reprice_c1t.setText("Reprice");
+        btn_reprice_c1t.setEnabled(false);
+
+        btn_restock_c1g.setBackground(new java.awt.Color(0, 0, 0));
+        btn_restock_c1g.setFont(new java.awt.Font("Arial", 0, 36)); // NOI18N
+        btn_restock_c1g.setForeground(new java.awt.Color(255, 255, 255));
+        btn_restock_c1g.setText("Restock");
+        btn_restock_c1g.setEnabled(false);
+
+        spn_stock_c1g.setFont(new java.awt.Font("Arial", 0, 36)); // NOI18N
+        spn_stock_c1g.setEnabled(false);
+
+        btn_reprice_c1g.setBackground(new java.awt.Color(0, 0, 0));
+        btn_reprice_c1g.setFont(new java.awt.Font("Arial", 0, 36)); // NOI18N
+        btn_reprice_c1g.setForeground(new java.awt.Color(255, 255, 255));
+        btn_reprice_c1g.setText("Reprice");
+        btn_reprice_c1g.setEnabled(false);
+
+        spn_price_c1g.setFont(new java.awt.Font("Arial", 0, 36)); // NOI18N
+        spn_price_c1g.setEnabled(false);
+
+        lbl_price_c1g.setBackground(new java.awt.Color(0, 0, 0));
+        lbl_price_c1g.setFont(new java.awt.Font("Arial", 0, 36)); // NOI18N
+        lbl_price_c1g.setForeground(new java.awt.Color(255, 255, 255));
+        lbl_price_c1g.setText("0");
+
+        lbl_stock_c1g.setBackground(new java.awt.Color(0, 0, 0));
+        lbl_stock_c1g.setFont(new java.awt.Font("Arial", 0, 36)); // NOI18N
+        lbl_stock_c1g.setForeground(new java.awt.Color(255, 255, 255));
+        lbl_stock_c1g.setText("0");
+
+        btn_inv_c2.setBackground(new java.awt.Color(0, 0, 0));
+        btn_inv_c2.setFont(new java.awt.Font("Arial", 0, 36)); // NOI18N
+        btn_inv_c2.setForeground(new java.awt.Color(255, 255, 255));
+        btn_inv_c2.setText("Cappuccino");
+        btn_inv_c2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_inv_c2ActionPerformed(evt);
+            }
+        });
+
+        jLabel13.setBackground(new java.awt.Color(0, 0, 0));
+        jLabel13.setFont(new java.awt.Font("Arial", 0, 36)); // NOI18N
+        jLabel13.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel13.setText("Tall");
+
+        jLabel14.setBackground(new java.awt.Color(0, 0, 0));
+        jLabel14.setFont(new java.awt.Font("Arial", 0, 36)); // NOI18N
+        jLabel14.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel14.setText("Grande");
+
+        btn_restock_c2g.setBackground(new java.awt.Color(0, 0, 0));
+        btn_restock_c2g.setFont(new java.awt.Font("Arial", 0, 36)); // NOI18N
+        btn_restock_c2g.setForeground(new java.awt.Color(255, 255, 255));
+        btn_restock_c2g.setText("Restock");
+        btn_restock_c2g.setEnabled(false);
+
+        btn_restock_c2t.setBackground(new java.awt.Color(0, 0, 0));
+        btn_restock_c2t.setFont(new java.awt.Font("Arial", 0, 36)); // NOI18N
+        btn_restock_c2t.setForeground(new java.awt.Color(255, 255, 255));
+        btn_restock_c2t.setText("Restock");
+        btn_restock_c2t.setEnabled(false);
+
+        spn_stock_c2t.setFont(new java.awt.Font("Arial", 0, 36)); // NOI18N
+        spn_stock_c2t.setEnabled(false);
+
+        lbl_stock_c2t.setBackground(new java.awt.Color(0, 0, 0));
+        lbl_stock_c2t.setFont(new java.awt.Font("Arial", 0, 36)); // NOI18N
+        lbl_stock_c2t.setForeground(new java.awt.Color(255, 255, 255));
+        lbl_stock_c2t.setText("0");
+
+        spn_stock_c2g.setFont(new java.awt.Font("Arial", 0, 36)); // NOI18N
+        spn_stock_c2g.setEnabled(false);
+
+        lbl_stock_c2g.setBackground(new java.awt.Color(0, 0, 0));
+        lbl_stock_c2g.setFont(new java.awt.Font("Arial", 0, 36)); // NOI18N
+        lbl_stock_c2g.setForeground(new java.awt.Color(255, 255, 255));
+        lbl_stock_c2g.setText("0");
+
+        btn_reprice_c2g.setBackground(new java.awt.Color(0, 0, 0));
+        btn_reprice_c2g.setFont(new java.awt.Font("Arial", 0, 36)); // NOI18N
+        btn_reprice_c2g.setForeground(new java.awt.Color(255, 255, 255));
+        btn_reprice_c2g.setText("Reprice");
+        btn_reprice_c2g.setEnabled(false);
+
+        spn_price_c2g.setFont(new java.awt.Font("Arial", 0, 36)); // NOI18N
+        spn_price_c2g.setEnabled(false);
+
+        lbl_price_c2g.setBackground(new java.awt.Color(0, 0, 0));
+        lbl_price_c2g.setFont(new java.awt.Font("Arial", 0, 36)); // NOI18N
+        lbl_price_c2g.setForeground(new java.awt.Color(255, 255, 255));
+        lbl_price_c2g.setText("0");
+
+        spn_price_c2t.setFont(new java.awt.Font("Arial", 0, 36)); // NOI18N
+        spn_price_c2t.setEnabled(false);
+
+        btn_reprice_c2t.setBackground(new java.awt.Color(0, 0, 0));
+        btn_reprice_c2t.setFont(new java.awt.Font("Arial", 0, 36)); // NOI18N
+        btn_reprice_c2t.setForeground(new java.awt.Color(255, 255, 255));
+        btn_reprice_c2t.setText("Reprice");
+        btn_reprice_c2t.setEnabled(false);
+
+        lbl_price_c2t.setBackground(new java.awt.Color(0, 0, 0));
+        lbl_price_c2t.setFont(new java.awt.Font("Arial", 0, 36)); // NOI18N
+        lbl_price_c2t.setForeground(new java.awt.Color(255, 255, 255));
+        lbl_price_c2t.setText("0");
+
+        lbl_iconInv_c2.setText("jLabel15");
+
+        lbl_iconInv_c1.setText("jLabel15");
+
+        btn_reprice_c3g.setBackground(new java.awt.Color(0, 0, 0));
+        btn_reprice_c3g.setFont(new java.awt.Font("Arial", 0, 36)); // NOI18N
+        btn_reprice_c3g.setForeground(new java.awt.Color(255, 255, 255));
+        btn_reprice_c3g.setText("Reprice");
+        btn_reprice_c3g.setEnabled(false);
+
+        spn_price_c3g.setFont(new java.awt.Font("Arial", 0, 36)); // NOI18N
+        spn_price_c3g.setEnabled(false);
+
+        lbl_price_c3g.setBackground(new java.awt.Color(0, 0, 0));
+        lbl_price_c3g.setFont(new java.awt.Font("Arial", 0, 36)); // NOI18N
+        lbl_price_c3g.setForeground(new java.awt.Color(255, 255, 255));
+        lbl_price_c3g.setText("0");
+
+        spn_price_c3t.setFont(new java.awt.Font("Arial", 0, 36)); // NOI18N
+        spn_price_c3t.setEnabled(false);
+
+        btn_reprice_c3t.setBackground(new java.awt.Color(0, 0, 0));
+        btn_reprice_c3t.setFont(new java.awt.Font("Arial", 0, 36)); // NOI18N
+        btn_reprice_c3t.setForeground(new java.awt.Color(255, 255, 255));
+        btn_reprice_c3t.setText("Reprice");
+        btn_reprice_c3t.setEnabled(false);
+
+        lbl_price_c3t.setBackground(new java.awt.Color(0, 0, 0));
+        lbl_price_c3t.setFont(new java.awt.Font("Arial", 0, 36)); // NOI18N
+        lbl_price_c3t.setForeground(new java.awt.Color(255, 255, 255));
+        lbl_price_c3t.setText("0");
+
+        lbl_stock_c3t.setBackground(new java.awt.Color(0, 0, 0));
+        lbl_stock_c3t.setFont(new java.awt.Font("Arial", 0, 36)); // NOI18N
+        lbl_stock_c3t.setForeground(new java.awt.Color(255, 255, 255));
+        lbl_stock_c3t.setText("0");
+
+        spn_stock_c3t.setFont(new java.awt.Font("Arial", 0, 36)); // NOI18N
+        spn_stock_c3t.setEnabled(false);
+
+        btn_restock_c3t.setBackground(new java.awt.Color(0, 0, 0));
+        btn_restock_c3t.setFont(new java.awt.Font("Arial", 0, 36)); // NOI18N
+        btn_restock_c3t.setForeground(new java.awt.Color(255, 255, 255));
+        btn_restock_c3t.setText("Restock");
+        btn_restock_c3t.setEnabled(false);
+
+        lbl_stock_c3g.setBackground(new java.awt.Color(0, 0, 0));
+        lbl_stock_c3g.setFont(new java.awt.Font("Arial", 0, 36)); // NOI18N
+        lbl_stock_c3g.setForeground(new java.awt.Color(255, 255, 255));
+        lbl_stock_c3g.setText("0");
+
+        spn_stock_c3g.setFont(new java.awt.Font("Arial", 0, 36)); // NOI18N
+        spn_stock_c3g.setEnabled(false);
+
+        btn_restock_c3g.setBackground(new java.awt.Color(0, 0, 0));
+        btn_restock_c3g.setFont(new java.awt.Font("Arial", 0, 36)); // NOI18N
+        btn_restock_c3g.setForeground(new java.awt.Color(255, 255, 255));
+        btn_restock_c3g.setText("Restock");
+        btn_restock_c3g.setEnabled(false);
+
+        jLabel15.setBackground(new java.awt.Color(0, 0, 0));
+        jLabel15.setFont(new java.awt.Font("Arial", 0, 36)); // NOI18N
+        jLabel15.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel15.setText("Grande");
+
+        lbl_iconInv_c3.setText("jLabel15");
+
+        jLabel16.setBackground(new java.awt.Color(0, 0, 0));
+        jLabel16.setFont(new java.awt.Font("Arial", 0, 36)); // NOI18N
+        jLabel16.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel16.setText("Tall");
+
+        btn_inv_c3.setBackground(new java.awt.Color(0, 0, 0));
+        btn_inv_c3.setFont(new java.awt.Font("Arial", 0, 36)); // NOI18N
+        btn_inv_c3.setForeground(new java.awt.Color(255, 255, 255));
+        btn_inv_c3.setText("Cafè Latte");
+        btn_inv_c3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_inv_c3ActionPerformed(evt);
+            }
+        });
+
+        btn_inv_c4.setBackground(new java.awt.Color(0, 0, 0));
+        btn_inv_c4.setFont(new java.awt.Font("Arial", 0, 36)); // NOI18N
+        btn_inv_c4.setForeground(new java.awt.Color(255, 255, 255));
+        btn_inv_c4.setText("Caramel Latte");
+        btn_inv_c4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_inv_c4ActionPerformed(evt);
+            }
+        });
+
+        jLabel17.setBackground(new java.awt.Color(0, 0, 0));
+        jLabel17.setFont(new java.awt.Font("Arial", 0, 36)); // NOI18N
+        jLabel17.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel17.setText("Tall");
+
+        jLabel18.setBackground(new java.awt.Color(0, 0, 0));
+        jLabel18.setFont(new java.awt.Font("Arial", 0, 36)); // NOI18N
+        jLabel18.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel18.setText("Grande");
+
+        lbl_iconInv_c4.setText("jLabel15");
+
+        btn_restock_c4t.setBackground(new java.awt.Color(0, 0, 0));
+        btn_restock_c4t.setFont(new java.awt.Font("Arial", 0, 36)); // NOI18N
+        btn_restock_c4t.setForeground(new java.awt.Color(255, 255, 255));
+        btn_restock_c4t.setText("Restock");
+        btn_restock_c4t.setEnabled(false);
+
+        btn_restock_c4g.setBackground(new java.awt.Color(0, 0, 0));
+        btn_restock_c4g.setFont(new java.awt.Font("Arial", 0, 36)); // NOI18N
+        btn_restock_c4g.setForeground(new java.awt.Color(255, 255, 255));
+        btn_restock_c4g.setText("Restock");
+        btn_restock_c4g.setEnabled(false);
+
+        spn_stock_c4g.setFont(new java.awt.Font("Arial", 0, 36)); // NOI18N
+        spn_stock_c4g.setEnabled(false);
+
+        lbl_stock_c4g.setBackground(new java.awt.Color(0, 0, 0));
+        lbl_stock_c4g.setFont(new java.awt.Font("Arial", 0, 36)); // NOI18N
+        lbl_stock_c4g.setForeground(new java.awt.Color(255, 255, 255));
+        lbl_stock_c4g.setText("0");
+
+        spn_stock_c4t.setFont(new java.awt.Font("Arial", 0, 36)); // NOI18N
+        spn_stock_c4t.setEnabled(false);
+
+        lbl_stock_c4t.setBackground(new java.awt.Color(0, 0, 0));
+        lbl_stock_c4t.setFont(new java.awt.Font("Arial", 0, 36)); // NOI18N
+        lbl_stock_c4t.setForeground(new java.awt.Color(255, 255, 255));
+        lbl_stock_c4t.setText("0");
+
+        btn_reprice_c4t.setBackground(new java.awt.Color(0, 0, 0));
+        btn_reprice_c4t.setFont(new java.awt.Font("Arial", 0, 36)); // NOI18N
+        btn_reprice_c4t.setForeground(new java.awt.Color(255, 255, 255));
+        btn_reprice_c4t.setText("Reprice");
+        btn_reprice_c4t.setEnabled(false);
+
+        spn_price_c4t.setFont(new java.awt.Font("Arial", 0, 36)); // NOI18N
+        spn_price_c4t.setEnabled(false);
+
+        lbl_price_c4t.setBackground(new java.awt.Color(0, 0, 0));
+        lbl_price_c4t.setFont(new java.awt.Font("Arial", 0, 36)); // NOI18N
+        lbl_price_c4t.setForeground(new java.awt.Color(255, 255, 255));
+        lbl_price_c4t.setText("0");
+
+        lbl_price_c4g.setBackground(new java.awt.Color(0, 0, 0));
+        lbl_price_c4g.setFont(new java.awt.Font("Arial", 0, 36)); // NOI18N
+        lbl_price_c4g.setForeground(new java.awt.Color(255, 255, 255));
+        lbl_price_c4g.setText("0");
+
+        spn_price_c4g.setFont(new java.awt.Font("Arial", 0, 36)); // NOI18N
+        spn_price_c4g.setEnabled(false);
+
+        btn_reprice_c4g.setBackground(new java.awt.Color(0, 0, 0));
+        btn_reprice_c4g.setFont(new java.awt.Font("Arial", 0, 36)); // NOI18N
+        btn_reprice_c4g.setForeground(new java.awt.Color(255, 255, 255));
+        btn_reprice_c4g.setText("Reprice");
+        btn_reprice_c4g.setEnabled(false);
+
+        spn_price_c5g.setFont(new java.awt.Font("Arial", 0, 36)); // NOI18N
+        spn_price_c5g.setEnabled(false);
+
+        lbl_price_c5g.setBackground(new java.awt.Color(0, 0, 0));
+        lbl_price_c5g.setFont(new java.awt.Font("Arial", 0, 36)); // NOI18N
+        lbl_price_c5g.setForeground(new java.awt.Color(255, 255, 255));
+        lbl_price_c5g.setText("0");
+
+        btn_reprice_c5g.setBackground(new java.awt.Color(0, 0, 0));
+        btn_reprice_c5g.setFont(new java.awt.Font("Arial", 0, 36)); // NOI18N
+        btn_reprice_c5g.setForeground(new java.awt.Color(255, 255, 255));
+        btn_reprice_c5g.setText("Reprice");
+        btn_reprice_c5g.setEnabled(false);
+
+        spn_stock_c5g.setFont(new java.awt.Font("Arial", 0, 36)); // NOI18N
+        spn_stock_c5g.setEnabled(false);
+
+        btn_restock_c5g.setBackground(new java.awt.Color(0, 0, 0));
+        btn_restock_c5g.setFont(new java.awt.Font("Arial", 0, 36)); // NOI18N
+        btn_restock_c5g.setForeground(new java.awt.Color(255, 255, 255));
+        btn_restock_c5g.setText("Restock");
+        btn_restock_c5g.setEnabled(false);
+
+        lbl_stock_c5g.setBackground(new java.awt.Color(0, 0, 0));
+        lbl_stock_c5g.setFont(new java.awt.Font("Arial", 0, 36)); // NOI18N
+        lbl_stock_c5g.setForeground(new java.awt.Color(255, 255, 255));
+        lbl_stock_c5g.setText("0");
+
+        spn_stock_c5t.setFont(new java.awt.Font("Arial", 0, 36)); // NOI18N
+        spn_stock_c5t.setEnabled(false);
+
+        btn_restock_c5t.setBackground(new java.awt.Color(0, 0, 0));
+        btn_restock_c5t.setFont(new java.awt.Font("Arial", 0, 36)); // NOI18N
+        btn_restock_c5t.setForeground(new java.awt.Color(255, 255, 255));
+        btn_restock_c5t.setText("Restock");
+        btn_restock_c5t.setEnabled(false);
+
+        lbl_stock_c5t.setBackground(new java.awt.Color(0, 0, 0));
+        lbl_stock_c5t.setFont(new java.awt.Font("Arial", 0, 36)); // NOI18N
+        lbl_stock_c5t.setForeground(new java.awt.Color(255, 255, 255));
+        lbl_stock_c5t.setText("0");
+
+        spn_price_c5t.setFont(new java.awt.Font("Arial", 0, 36)); // NOI18N
+        spn_price_c5t.setEnabled(false);
+
+        btn_reprice_c5t.setBackground(new java.awt.Color(0, 0, 0));
+        btn_reprice_c5t.setFont(new java.awt.Font("Arial", 0, 36)); // NOI18N
+        btn_reprice_c5t.setForeground(new java.awt.Color(255, 255, 255));
+        btn_reprice_c5t.setText("Reprice");
+        btn_reprice_c5t.setEnabled(false);
+
+        lbl_price_c5t.setBackground(new java.awt.Color(0, 0, 0));
+        lbl_price_c5t.setFont(new java.awt.Font("Arial", 0, 36)); // NOI18N
+        lbl_price_c5t.setForeground(new java.awt.Color(255, 255, 255));
+        lbl_price_c5t.setText("0");
+
+        lbl_iconInv_c5.setText("jLabel15");
+
+        jLabel19.setBackground(new java.awt.Color(0, 0, 0));
+        jLabel19.setFont(new java.awt.Font("Arial", 0, 36)); // NOI18N
+        jLabel19.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel19.setText("Grande");
+
+        jLabel20.setBackground(new java.awt.Color(0, 0, 0));
+        jLabel20.setFont(new java.awt.Font("Arial", 0, 36)); // NOI18N
+        jLabel20.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel20.setText("Tall");
+
+        btn_inv_c5.setBackground(new java.awt.Color(0, 0, 0));
+        btn_inv_c5.setFont(new java.awt.Font("Arial", 0, 36)); // NOI18N
+        btn_inv_c5.setForeground(new java.awt.Color(255, 255, 255));
+        btn_inv_c5.setText("Cafè Mocha");
+        btn_inv_c5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_inv_c5ActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout pnl_admin_inventoryLayout = new javax.swing.GroupLayout(pnl_admin_inventory);
+        pnl_admin_inventory.setLayout(pnl_admin_inventoryLayout);
+        pnl_admin_inventoryLayout.setHorizontalGroup(
+            pnl_admin_inventoryLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnl_admin_inventoryLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(pnl_admin_inventoryLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(pnl_admin_inventoryLayout.createSequentialGroup()
+                        .addComponent(jLabel12)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGroup(pnl_admin_inventoryLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(lbl_stock_c1g)
+                            .addGroup(pnl_admin_inventoryLayout.createSequentialGroup()
+                                .addComponent(btn_restock_c1g)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(spn_stock_c1g, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(18, 18, 18)
+                        .addGroup(pnl_admin_inventoryLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnl_admin_inventoryLayout.createSequentialGroup()
+                                .addComponent(btn_reprice_c1g)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(spn_price_c1g, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(lbl_price_c1g, javax.swing.GroupLayout.Alignment.TRAILING)))
+                    .addGroup(pnl_admin_inventoryLayout.createSequentialGroup()
+                        .addGroup(pnl_admin_inventoryLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(pnl_admin_inventoryLayout.createSequentialGroup()
+                                .addGroup(pnl_admin_inventoryLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel8)
+                                    .addComponent(btn_inv_c1)
+                                    .addGroup(pnl_admin_inventoryLayout.createSequentialGroup()
+                                        .addComponent(jLabel11)
+                                        .addGap(70, 70, 70)
+                                        .addComponent(lbl_iconInv_c1, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 175, Short.MAX_VALUE)
+                                .addGroup(pnl_admin_inventoryLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(lbl_stock_c1t)
+                                    .addComponent(jLabel9)))
+                            .addGroup(pnl_admin_inventoryLayout.createSequentialGroup()
+                                .addGap(0, 0, Short.MAX_VALUE)
+                                .addComponent(btn_restock_c1t)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(spn_stock_c1t, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(18, 18, 18)
+                        .addGroup(pnl_admin_inventoryLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnl_admin_inventoryLayout.createSequentialGroup()
+                                .addComponent(btn_reprice_c1t)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(spn_price_c1t, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(jLabel10, javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(lbl_price_c1t, javax.swing.GroupLayout.Alignment.TRAILING)))
+                    .addGroup(pnl_admin_inventoryLayout.createSequentialGroup()
+                        .addComponent(jLabel14)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGroup(pnl_admin_inventoryLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(lbl_stock_c2g)
+                            .addGroup(pnl_admin_inventoryLayout.createSequentialGroup()
+                                .addComponent(btn_restock_c2g)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(spn_stock_c2g, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(18, 18, 18)
+                        .addGroup(pnl_admin_inventoryLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnl_admin_inventoryLayout.createSequentialGroup()
+                                .addComponent(btn_reprice_c2g)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(spn_price_c2g, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(lbl_price_c2g, javax.swing.GroupLayout.Alignment.TRAILING)))
+                    .addGroup(pnl_admin_inventoryLayout.createSequentialGroup()
+                        .addGroup(pnl_admin_inventoryLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(pnl_admin_inventoryLayout.createSequentialGroup()
+                                .addGroup(pnl_admin_inventoryLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(btn_inv_c2)
+                                    .addGroup(pnl_admin_inventoryLayout.createSequentialGroup()
+                                        .addComponent(jLabel13)
+                                        .addGap(70, 70, 70)
+                                        .addComponent(lbl_iconInv_c2, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(lbl_stock_c2t))
+                            .addGroup(pnl_admin_inventoryLayout.createSequentialGroup()
+                                .addGap(0, 0, Short.MAX_VALUE)
+                                .addComponent(btn_restock_c2t)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(spn_stock_c2t, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(18, 18, 18)
+                        .addGroup(pnl_admin_inventoryLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnl_admin_inventoryLayout.createSequentialGroup()
+                                .addComponent(btn_reprice_c2t)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(spn_price_c2t, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(lbl_price_c2t, javax.swing.GroupLayout.Alignment.TRAILING)))
+                    .addGroup(pnl_admin_inventoryLayout.createSequentialGroup()
+                        .addComponent(jLabel15)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGroup(pnl_admin_inventoryLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(lbl_stock_c3g)
+                            .addGroup(pnl_admin_inventoryLayout.createSequentialGroup()
+                                .addComponent(btn_restock_c3g)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(spn_stock_c3g, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(18, 18, 18)
+                        .addGroup(pnl_admin_inventoryLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnl_admin_inventoryLayout.createSequentialGroup()
+                                .addComponent(btn_reprice_c3g)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(spn_price_c3g, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(lbl_price_c3g, javax.swing.GroupLayout.Alignment.TRAILING)))
+                    .addGroup(pnl_admin_inventoryLayout.createSequentialGroup()
+                        .addGroup(pnl_admin_inventoryLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(pnl_admin_inventoryLayout.createSequentialGroup()
+                                .addGroup(pnl_admin_inventoryLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(btn_inv_c3)
+                                    .addGroup(pnl_admin_inventoryLayout.createSequentialGroup()
+                                        .addComponent(jLabel16)
+                                        .addGap(70, 70, 70)
+                                        .addComponent(lbl_iconInv_c3, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(lbl_stock_c3t))
+                            .addGroup(pnl_admin_inventoryLayout.createSequentialGroup()
+                                .addGap(0, 0, Short.MAX_VALUE)
+                                .addComponent(btn_restock_c3t)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(spn_stock_c3t, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(18, 18, 18)
+                        .addGroup(pnl_admin_inventoryLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnl_admin_inventoryLayout.createSequentialGroup()
+                                .addComponent(btn_reprice_c3t)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(spn_price_c3t, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(lbl_price_c3t, javax.swing.GroupLayout.Alignment.TRAILING)))
+                    .addGroup(pnl_admin_inventoryLayout.createSequentialGroup()
+                        .addComponent(jLabel18)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGroup(pnl_admin_inventoryLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(lbl_stock_c4g)
+                            .addGroup(pnl_admin_inventoryLayout.createSequentialGroup()
+                                .addComponent(btn_restock_c4g)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(spn_stock_c4g, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(18, 18, 18)
+                        .addGroup(pnl_admin_inventoryLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnl_admin_inventoryLayout.createSequentialGroup()
+                                .addComponent(btn_reprice_c4g)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(spn_price_c4g, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(lbl_price_c4g, javax.swing.GroupLayout.Alignment.TRAILING)))
+                    .addGroup(pnl_admin_inventoryLayout.createSequentialGroup()
+                        .addGroup(pnl_admin_inventoryLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(pnl_admin_inventoryLayout.createSequentialGroup()
+                                .addGroup(pnl_admin_inventoryLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(btn_inv_c4)
+                                    .addGroup(pnl_admin_inventoryLayout.createSequentialGroup()
+                                        .addComponent(jLabel17)
+                                        .addGap(70, 70, 70)
+                                        .addComponent(lbl_iconInv_c4, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(lbl_stock_c4t))
+                            .addGroup(pnl_admin_inventoryLayout.createSequentialGroup()
+                                .addGap(0, 0, Short.MAX_VALUE)
+                                .addComponent(btn_restock_c4t)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(spn_stock_c4t, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(18, 18, 18)
+                        .addGroup(pnl_admin_inventoryLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnl_admin_inventoryLayout.createSequentialGroup()
+                                .addComponent(btn_reprice_c4t)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(spn_price_c4t, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(lbl_price_c4t, javax.swing.GroupLayout.Alignment.TRAILING)))
+                    .addGroup(pnl_admin_inventoryLayout.createSequentialGroup()
+                        .addComponent(jLabel19)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGroup(pnl_admin_inventoryLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(lbl_stock_c5g)
+                            .addGroup(pnl_admin_inventoryLayout.createSequentialGroup()
+                                .addComponent(btn_restock_c5g)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(spn_stock_c5g, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(18, 18, 18)
+                        .addGroup(pnl_admin_inventoryLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnl_admin_inventoryLayout.createSequentialGroup()
+                                .addComponent(btn_reprice_c5g)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(spn_price_c5g, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(lbl_price_c5g, javax.swing.GroupLayout.Alignment.TRAILING)))
+                    .addGroup(pnl_admin_inventoryLayout.createSequentialGroup()
+                        .addGroup(pnl_admin_inventoryLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(pnl_admin_inventoryLayout.createSequentialGroup()
+                                .addGroup(pnl_admin_inventoryLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(btn_inv_c5)
+                                    .addGroup(pnl_admin_inventoryLayout.createSequentialGroup()
+                                        .addComponent(jLabel20)
+                                        .addGap(70, 70, 70)
+                                        .addComponent(lbl_iconInv_c5, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(lbl_stock_c5t))
+                            .addGroup(pnl_admin_inventoryLayout.createSequentialGroup()
+                                .addGap(0, 0, Short.MAX_VALUE)
+                                .addComponent(btn_restock_c5t)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(spn_stock_c5t, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(18, 18, 18)
+                        .addGroup(pnl_admin_inventoryLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnl_admin_inventoryLayout.createSequentialGroup()
+                                .addComponent(btn_reprice_c5t)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(spn_price_c5t, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(lbl_price_c5t, javax.swing.GroupLayout.Alignment.TRAILING))))
+                .addContainerGap())
         );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 397, Short.MAX_VALUE)
+        pnl_admin_inventoryLayout.setVerticalGroup(
+            pnl_admin_inventoryLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnl_admin_inventoryLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(pnl_admin_inventoryLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel8)
+                    .addComponent(jLabel9)
+                    .addComponent(jLabel10))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(btn_inv_c1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(pnl_admin_inventoryLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(pnl_admin_inventoryLayout.createSequentialGroup()
+                        .addGroup(pnl_admin_inventoryLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel11)
+                            .addGroup(pnl_admin_inventoryLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                .addComponent(lbl_stock_c1t)
+                                .addComponent(lbl_price_c1t)))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(pnl_admin_inventoryLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(spn_stock_c1t, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(spn_price_c1t, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(btn_restock_c1t)
+                            .addComponent(btn_reprice_c1t))
+                        .addGap(17, 17, 17)
+                        .addGroup(pnl_admin_inventoryLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel12)
+                            .addGroup(pnl_admin_inventoryLayout.createSequentialGroup()
+                                .addGroup(pnl_admin_inventoryLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(lbl_stock_c1g)
+                                    .addComponent(lbl_price_c1g))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(pnl_admin_inventoryLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(spn_stock_c1g, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(spn_price_c1g, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(btn_restock_c1g)
+                                    .addComponent(btn_reprice_c1g)))))
+                    .addComponent(lbl_iconInv_c1, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(btn_inv_c2)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(pnl_admin_inventoryLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(pnl_admin_inventoryLayout.createSequentialGroup()
+                        .addGroup(pnl_admin_inventoryLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel13)
+                            .addGroup(pnl_admin_inventoryLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                .addComponent(lbl_stock_c2t)
+                                .addComponent(lbl_price_c2t)))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(pnl_admin_inventoryLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(spn_stock_c2t, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(spn_price_c2t, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(btn_restock_c2t)
+                            .addComponent(btn_reprice_c2t))
+                        .addGap(17, 17, 17)
+                        .addGroup(pnl_admin_inventoryLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel14)
+                            .addGroup(pnl_admin_inventoryLayout.createSequentialGroup()
+                                .addGroup(pnl_admin_inventoryLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(lbl_stock_c2g)
+                                    .addComponent(lbl_price_c2g))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(pnl_admin_inventoryLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(spn_stock_c2g, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(spn_price_c2g, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(btn_restock_c2g)
+                                    .addComponent(btn_reprice_c2g)))))
+                    .addComponent(lbl_iconInv_c2, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(btn_inv_c3)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(pnl_admin_inventoryLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(pnl_admin_inventoryLayout.createSequentialGroup()
+                        .addGroup(pnl_admin_inventoryLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel16)
+                            .addGroup(pnl_admin_inventoryLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                .addComponent(lbl_stock_c3t)
+                                .addComponent(lbl_price_c3t)))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(pnl_admin_inventoryLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(spn_stock_c3t, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(spn_price_c3t, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(btn_restock_c3t)
+                            .addComponent(btn_reprice_c3t))
+                        .addGap(17, 17, 17)
+                        .addGroup(pnl_admin_inventoryLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel15)
+                            .addGroup(pnl_admin_inventoryLayout.createSequentialGroup()
+                                .addGroup(pnl_admin_inventoryLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(lbl_stock_c3g)
+                                    .addComponent(lbl_price_c3g))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(pnl_admin_inventoryLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(spn_stock_c3g, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(spn_price_c3g, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(btn_restock_c3g)
+                                    .addComponent(btn_reprice_c3g)))))
+                    .addComponent(lbl_iconInv_c3, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(btn_inv_c4)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(pnl_admin_inventoryLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(pnl_admin_inventoryLayout.createSequentialGroup()
+                        .addGroup(pnl_admin_inventoryLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel17)
+                            .addGroup(pnl_admin_inventoryLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                .addComponent(lbl_stock_c4t)
+                                .addComponent(lbl_price_c4t)))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(pnl_admin_inventoryLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(spn_stock_c4t, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(spn_price_c4t, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(btn_restock_c4t)
+                            .addComponent(btn_reprice_c4t))
+                        .addGap(17, 17, 17)
+                        .addGroup(pnl_admin_inventoryLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel18)
+                            .addGroup(pnl_admin_inventoryLayout.createSequentialGroup()
+                                .addGroup(pnl_admin_inventoryLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(lbl_stock_c4g)
+                                    .addComponent(lbl_price_c4g))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(pnl_admin_inventoryLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(spn_stock_c4g, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(spn_price_c4g, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(btn_restock_c4g)
+                                    .addComponent(btn_reprice_c4g)))))
+                    .addComponent(lbl_iconInv_c4, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(btn_inv_c5)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(pnl_admin_inventoryLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(pnl_admin_inventoryLayout.createSequentialGroup()
+                        .addGroup(pnl_admin_inventoryLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel20)
+                            .addGroup(pnl_admin_inventoryLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                .addComponent(lbl_stock_c5t)
+                                .addComponent(lbl_price_c5t)))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(pnl_admin_inventoryLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(spn_stock_c5t, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(spn_price_c5t, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(btn_restock_c5t)
+                            .addComponent(btn_reprice_c5t))
+                        .addGap(17, 17, 17)
+                        .addGroup(pnl_admin_inventoryLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel19)
+                            .addGroup(pnl_admin_inventoryLayout.createSequentialGroup()
+                                .addGroup(pnl_admin_inventoryLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(lbl_stock_c5g)
+                                    .addComponent(lbl_price_c5g))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(pnl_admin_inventoryLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(spn_stock_c5g, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(spn_price_c5g, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(btn_restock_c5g)
+                                    .addComponent(btn_reprice_c5g)))))
+                    .addComponent(lbl_iconInv_c5, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        jTabbedPane2.addTab("Inventory", jPanel1);
+        jScrollPane2.setViewportView(pnl_admin_inventory);
+
+        jTabbedPane2.addTab("Inventory", jScrollPane2);
 
         javax.swing.GroupLayout pnl_adminLayout = new javax.swing.GroupLayout(pnl_admin);
         pnl_admin.setLayout(pnl_adminLayout);
@@ -1356,26 +2207,6 @@ public class CoffeeOrder extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_btn_adminLoginActionPerformed
 
-    private void btn_admin_logoutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_admin_logoutActionPerformed
-        // TODO add your handling code here:
-        int dialogResult = JOptionPane.showConfirmDialog(null, "Do you wish to logout?",
-                    "Confirm logout", JOptionPane.YES_NO_OPTION);
-        if(dialogResult==JOptionPane.YES_OPTION){
-            pnl_main.removeAll();
-            pnl_main.add(pnl_client);
-            pnl_main.repaint();
-            pnl_main.revalidate();
-        }
-    }//GEN-LAST:event_btn_admin_logoutActionPerformed
-
-    private void btn_admin_pwdChangeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_admin_pwdChangeActionPerformed
-        // TODO add your handling code here:
-        pwd_old.setEditable(true);
-        pwd_new.setEditable(true);
-        pwd_confirm.setEditable(true);
-        btn_admin_confirmPwd.setEnabled(true);
-    }//GEN-LAST:event_btn_admin_pwdChangeActionPerformed
-
     private void btn_admin_confirmPwdActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_admin_confirmPwdActionPerformed
         // TODO add your handling code here
         if(!pwd_old.getText().equals("") || !pwd_new.getText().equals("") || !pwd_confirm.getText().equals("")){
@@ -1401,6 +2232,196 @@ public class CoffeeOrder extends javax.swing.JFrame {
         pwd_new.setText(null);
         pwd_confirm.setText(null);
     }//GEN-LAST:event_btn_admin_confirmPwdActionPerformed
+
+    private void btn_admin_pwdChangeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_admin_pwdChangeActionPerformed
+        // TODO add your handling code here:
+        pwd_old.setEditable(true);
+        pwd_new.setEditable(true);
+        pwd_confirm.setEditable(true);
+        btn_admin_confirmPwd.setEnabled(true);
+    }//GEN-LAST:event_btn_admin_pwdChangeActionPerformed
+
+    private void btn_admin_logoutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_admin_logoutActionPerformed
+        // TODO add your handling code here:
+        int dialogResult = JOptionPane.showConfirmDialog(null, "Do you wish to logout?",
+            "Confirm logout", JOptionPane.YES_NO_OPTION);
+        if(dialogResult==JOptionPane.YES_OPTION){
+            pnl_main.removeAll();
+            pnl_main.add(pnl_client);
+            pnl_main.repaint();
+            pnl_main.revalidate();
+        }
+    }//GEN-LAST:event_btn_admin_logoutActionPerformed
+
+    private void btn_inv_c1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_inv_c1ActionPerformed
+        // TODO add your handling code here:
+        if(btn_restock_c1t.isEnabled()){
+            lbl_iconInv_c1.setIcon(null);
+            btn_restock_c1t.setEnabled(false);
+            btn_reprice_c1t.setEnabled(false);
+            btn_restock_c1g.setEnabled(false);
+            btn_reprice_c1g.setEnabled(false);
+            spn_stock_c1t.setEnabled(false);
+            spn_price_c1t.setEnabled(false);
+            spn_stock_c1g.setEnabled(false);
+            spn_price_c1g.setEnabled(false);
+        }else{
+            BufferedImage img;
+            try{
+                img = ImageIO.read(new File(this.coffee[0].getImgPath()));
+                Image dimg = img.getScaledInstance(lbl_iconInv_c1.getWidth(),
+                        lbl_iconInv_c1.getHeight(), Image.SCALE_SMOOTH);
+                ImageIcon imageIcon = new ImageIcon(dimg);
+                lbl_iconInv_c1.setIcon(imageIcon);
+            }catch(IOException e){
+                JOptionPane.showMessageDialog(this, "Error:\n" + e);
+            }
+            btn_restock_c1t.setEnabled(true);
+            btn_reprice_c1t.setEnabled(true);
+            btn_restock_c1g.setEnabled(true);
+            btn_reprice_c1g.setEnabled(true);
+            spn_stock_c1t.setEnabled(true);
+            spn_price_c1t.setEnabled(true);
+            spn_stock_c1g.setEnabled(true);
+            spn_price_c1g.setEnabled(true);
+        }
+    }//GEN-LAST:event_btn_inv_c1ActionPerformed
+
+    private void btn_inv_c2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_inv_c2ActionPerformed
+        // TODO add your handling code here:
+        if(btn_restock_c2t.isEnabled()){
+            lbl_iconInv_c2.setIcon(null);
+            btn_restock_c2t.setEnabled(false);
+            btn_reprice_c2t.setEnabled(false);
+            btn_restock_c2g.setEnabled(false);
+            btn_reprice_c2g.setEnabled(false);
+            spn_stock_c2t.setEnabled(false);
+            spn_price_c2t.setEnabled(false);
+            spn_stock_c2g.setEnabled(false);
+            spn_price_c2g.setEnabled(false);
+        }else{
+            BufferedImage img;
+            try{
+                img = ImageIO.read(new File(this.coffee[1].getImgPath()));
+                Image dimg = img.getScaledInstance(lbl_iconInv_c2.getWidth(),
+                        lbl_iconInv_c2.getHeight(), Image.SCALE_SMOOTH);
+                ImageIcon imageIcon = new ImageIcon(dimg);
+                lbl_iconInv_c2.setIcon(imageIcon);
+            }catch(IOException e){
+                JOptionPane.showMessageDialog(this, "Error:\n" + e);
+            }
+            btn_restock_c2t.setEnabled(true);
+            btn_reprice_c2t.setEnabled(true);
+            btn_restock_c2g.setEnabled(true);
+            btn_reprice_c2g.setEnabled(true);
+            spn_stock_c2t.setEnabled(true);
+            spn_price_c2t.setEnabled(true);
+            spn_stock_c2g.setEnabled(true);
+            spn_price_c2g.setEnabled(true);
+        }
+    }//GEN-LAST:event_btn_inv_c2ActionPerformed
+
+    private void btn_inv_c3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_inv_c3ActionPerformed
+        // TODO add your handling code here:
+        if(btn_restock_c3t.isEnabled()){
+            lbl_iconInv_c3.setIcon(null);
+            btn_restock_c3t.setEnabled(false);
+            btn_reprice_c3t.setEnabled(false);
+            btn_restock_c3g.setEnabled(false);
+            btn_reprice_c3g.setEnabled(false);
+            spn_stock_c3t.setEnabled(false);
+            spn_price_c3t.setEnabled(false);
+            spn_stock_c3g.setEnabled(false);
+            spn_price_c3g.setEnabled(false);
+        }else{
+            BufferedImage img;
+            try{
+                img = ImageIO.read(new File(this.coffee[2].getImgPath()));
+                Image dimg = img.getScaledInstance(lbl_iconInv_c3.getWidth(),
+                        lbl_iconInv_c3.getHeight(), Image.SCALE_SMOOTH);
+                ImageIcon imageIcon = new ImageIcon(dimg);
+                lbl_iconInv_c3.setIcon(imageIcon);
+            }catch(IOException e){
+                JOptionPane.showMessageDialog(this, "Error:\n" + e);
+            }
+            btn_restock_c3t.setEnabled(true);
+            btn_reprice_c3t.setEnabled(true);
+            btn_restock_c3g.setEnabled(true);
+            btn_reprice_c3g.setEnabled(true);
+            spn_stock_c3t.setEnabled(true);
+            spn_price_c3t.setEnabled(true);
+            spn_stock_c3g.setEnabled(true);
+            spn_price_c3g.setEnabled(true);
+        }
+    }//GEN-LAST:event_btn_inv_c3ActionPerformed
+
+    private void btn_inv_c4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_inv_c4ActionPerformed
+        // TODO add your handling code here:
+        if(btn_restock_c4t.isEnabled()){
+            lbl_iconInv_c4.setIcon(null);
+            btn_restock_c4t.setEnabled(false);
+            btn_reprice_c4t.setEnabled(false);
+            btn_restock_c4g.setEnabled(false);
+            btn_reprice_c4g.setEnabled(false);
+            spn_stock_c4t.setEnabled(false);
+            spn_price_c4t.setEnabled(false);
+            spn_stock_c4g.setEnabled(false);
+            spn_price_c4g.setEnabled(false);
+        }else{
+            BufferedImage img;
+            try{
+                img = ImageIO.read(new File(this.coffee[3].getImgPath()));
+                Image dimg = img.getScaledInstance(lbl_iconInv_c4.getWidth(),
+                        lbl_iconInv_c4.getHeight(), Image.SCALE_SMOOTH);
+                ImageIcon imageIcon = new ImageIcon(dimg);
+                lbl_iconInv_c4.setIcon(imageIcon);
+            }catch(IOException e){
+                JOptionPane.showMessageDialog(this, "Error:\n" + e);
+            }
+            btn_restock_c4t.setEnabled(true);
+            btn_reprice_c4t.setEnabled(true);
+            btn_restock_c4g.setEnabled(true);
+            btn_reprice_c4g.setEnabled(true);
+            spn_stock_c4t.setEnabled(true);
+            spn_price_c4t.setEnabled(true);
+            spn_stock_c4g.setEnabled(true);
+            spn_price_c4g.setEnabled(true);
+        }
+    }//GEN-LAST:event_btn_inv_c4ActionPerformed
+
+    private void btn_inv_c5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_inv_c5ActionPerformed
+        // TODO add your handling code here:
+        if(btn_restock_c5t.isEnabled()){
+            lbl_iconInv_c5.setIcon(null);
+            btn_restock_c5t.setEnabled(false);
+            btn_reprice_c5t.setEnabled(false);
+            btn_restock_c5g.setEnabled(false);
+            btn_reprice_c5g.setEnabled(false);
+            spn_stock_c5t.setEnabled(false);
+            spn_price_c5t.setEnabled(false);
+            spn_stock_c5g.setEnabled(false);
+            spn_price_c5g.setEnabled(false);
+        }else{
+            BufferedImage img;
+            try{
+                img = ImageIO.read(new File(this.coffee[4].getImgPath()));
+                Image dimg = img.getScaledInstance(lbl_iconInv_c5.getWidth(),
+                        lbl_iconInv_c5.getHeight(), Image.SCALE_SMOOTH);
+                ImageIcon imageIcon = new ImageIcon(dimg);
+                lbl_iconInv_c5.setIcon(imageIcon);
+            }catch(IOException e){
+                JOptionPane.showMessageDialog(this, "Error:\n" + e);
+            }
+            btn_restock_c5t.setEnabled(true);
+            btn_reprice_c5t.setEnabled(true);
+            btn_restock_c5g.setEnabled(true);
+            btn_reprice_c5g.setEnabled(true);
+            spn_stock_c5t.setEnabled(true);
+            spn_price_c5t.setEnabled(true);
+            spn_stock_c5g.setEnabled(true);
+            spn_price_c5g.setEnabled(true);
+        }
+    }//GEN-LAST:event_btn_inv_c5ActionPerformed
     private void refreshReceipt(){
         int table_row = 0;
         for(int i=0; i<this.client_order_list.length; i++){
@@ -1526,6 +2547,31 @@ public class CoffeeOrder extends javax.swing.JFrame {
     private javax.swing.JButton btn_buytall_c5;
     private javax.swing.JButton btn_client_cancel;
     private javax.swing.JButton btn_client_confirm;
+    private javax.swing.JButton btn_inv_c1;
+    private javax.swing.JButton btn_inv_c2;
+    private javax.swing.JButton btn_inv_c3;
+    private javax.swing.JButton btn_inv_c4;
+    private javax.swing.JButton btn_inv_c5;
+    private javax.swing.JButton btn_reprice_c1g;
+    private javax.swing.JButton btn_reprice_c1t;
+    private javax.swing.JButton btn_reprice_c2g;
+    private javax.swing.JButton btn_reprice_c2t;
+    private javax.swing.JButton btn_reprice_c3g;
+    private javax.swing.JButton btn_reprice_c3t;
+    private javax.swing.JButton btn_reprice_c4g;
+    private javax.swing.JButton btn_reprice_c4t;
+    private javax.swing.JButton btn_reprice_c5g;
+    private javax.swing.JButton btn_reprice_c5t;
+    private javax.swing.JButton btn_restock_c1g;
+    private javax.swing.JButton btn_restock_c1t;
+    private javax.swing.JButton btn_restock_c2g;
+    private javax.swing.JButton btn_restock_c2t;
+    private javax.swing.JButton btn_restock_c3g;
+    private javax.swing.JButton btn_restock_c3t;
+    private javax.swing.JButton btn_restock_c4g;
+    private javax.swing.JButton btn_restock_c4t;
+    private javax.swing.JButton btn_restock_c5g;
+    private javax.swing.JButton btn_restock_c5t;
     private javax.swing.JButton btn_sel_c1;
     private javax.swing.JButton btn_sel_c2;
     private javax.swing.JButton btn_sel_c3;
@@ -1537,18 +2583,57 @@ public class CoffeeOrder extends javax.swing.JFrame {
     private javax.swing.JButton btn_sel_f4;
     private javax.swing.JButton btn_sel_f5;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel13;
+    private javax.swing.JLabel jLabel14;
+    private javax.swing.JLabel jLabel15;
+    private javax.swing.JLabel jLabel16;
+    private javax.swing.JLabel jLabel17;
+    private javax.swing.JLabel jLabel18;
+    private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel20;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
-    private javax.swing.JPanel jPanel1;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JTabbedPane jTabbedPane1;
     private javax.swing.JTabbedPane jTabbedPane2;
     private javax.swing.JLabel lbl_client_img;
+    private javax.swing.JLabel lbl_iconInv_c1;
+    private javax.swing.JLabel lbl_iconInv_c2;
+    private javax.swing.JLabel lbl_iconInv_c3;
+    private javax.swing.JLabel lbl_iconInv_c4;
+    private javax.swing.JLabel lbl_iconInv_c5;
+    private javax.swing.JLabel lbl_price_c1g;
+    private javax.swing.JLabel lbl_price_c1t;
+    private javax.swing.JLabel lbl_price_c2g;
+    private javax.swing.JLabel lbl_price_c2t;
+    private javax.swing.JLabel lbl_price_c3g;
+    private javax.swing.JLabel lbl_price_c3t;
+    private javax.swing.JLabel lbl_price_c4g;
+    private javax.swing.JLabel lbl_price_c4t;
+    private javax.swing.JLabel lbl_price_c5g;
+    private javax.swing.JLabel lbl_price_c5t;
+    private javax.swing.JLabel lbl_stock_c1g;
+    private javax.swing.JLabel lbl_stock_c1t;
+    private javax.swing.JLabel lbl_stock_c2g;
+    private javax.swing.JLabel lbl_stock_c2t;
+    private javax.swing.JLabel lbl_stock_c3g;
+    private javax.swing.JLabel lbl_stock_c3t;
+    private javax.swing.JLabel lbl_stock_c4g;
+    private javax.swing.JLabel lbl_stock_c4t;
+    private javax.swing.JLabel lbl_stock_c5g;
+    private javax.swing.JLabel lbl_stock_c5t;
     private javax.swing.JPanel pnl_admin;
+    private javax.swing.JPanel pnl_admin_inventory;
     private javax.swing.JPanel pnl_admin_main;
     private javax.swing.JPanel pnl_client;
     private javax.swing.JPanel pnl_client_coffee;
@@ -1558,6 +2643,26 @@ public class CoffeeOrder extends javax.swing.JFrame {
     private javax.swing.JPasswordField pwd_confirm;
     private javax.swing.JPasswordField pwd_new;
     private javax.swing.JPasswordField pwd_old;
+    private javax.swing.JSpinner spn_price_c1g;
+    private javax.swing.JSpinner spn_price_c1t;
+    private javax.swing.JSpinner spn_price_c2g;
+    private javax.swing.JSpinner spn_price_c2t;
+    private javax.swing.JSpinner spn_price_c3g;
+    private javax.swing.JSpinner spn_price_c3t;
+    private javax.swing.JSpinner spn_price_c4g;
+    private javax.swing.JSpinner spn_price_c4t;
+    private javax.swing.JSpinner spn_price_c5g;
+    private javax.swing.JSpinner spn_price_c5t;
+    private javax.swing.JSpinner spn_stock_c1g;
+    private javax.swing.JSpinner spn_stock_c1t;
+    private javax.swing.JSpinner spn_stock_c2g;
+    private javax.swing.JSpinner spn_stock_c2t;
+    private javax.swing.JSpinner spn_stock_c3g;
+    private javax.swing.JSpinner spn_stock_c3t;
+    private javax.swing.JSpinner spn_stock_c4g;
+    private javax.swing.JSpinner spn_stock_c4t;
+    private javax.swing.JSpinner spn_stock_c5g;
+    private javax.swing.JSpinner spn_stock_c5t;
     private javax.swing.JTable tbl_client_receipt;
     // End of variables declaration//GEN-END:variables
 }
