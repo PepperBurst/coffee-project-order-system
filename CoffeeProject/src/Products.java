@@ -80,7 +80,7 @@ public class Products {
         overwrite += qty_grande + "\r\n";
         overwrite += price_tall + "\r\n";
         overwrite += price_grande + "\r\n";
-        overwrite += img_path = "\r\n";
+        overwrite += img_path;
         WriteFile data = new WriteFile(path);
         try{
             data.writeToFile(overwrite);
