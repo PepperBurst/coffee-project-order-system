@@ -17,8 +17,10 @@ public class Products {
     private int price_tall;
     private int price_grande;
     private String img_path;
+    private String path;
     
-    public Products(String path){
+    public Products(String inPath){
+        path = inPath;
         try{
             ReadFile file_read = new ReadFile(path);
             String[] aryLines = file_read.OpenFile();
@@ -70,5 +72,20 @@ public class Products {
     
     public void setImgPath(String path){
         img_path = path;
+    }
+    
+    public void updateInformation(){
+        String overwrite = "";
+        overwrite += qty_tall + "\r\n";
+        overwrite += qty_grande + "\r\n";
+        overwrite += price_tall + "\r\n";
+        overwrite += price_grande + "\r\n";
+        overwrite += img_path = "\r\n";
+        WriteFile data = new WriteFile(path);
+        try{
+            data.writeToFile(overwrite);
+        }catch(IOException e){
+            System.out.println("Error:\n" + e);
+        }   
     }
 }

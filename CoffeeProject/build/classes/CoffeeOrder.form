@@ -238,7 +238,7 @@
                                   <Component id="btn_buygrande_c5" alignment="3" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace max="-2" attributes="0"/>
-                              <Component id="lbl_client_img" pref="125" max="32767" attributes="0"/>
+                              <Component id="lbl_client_img" pref="114" max="32767" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
                           </Group>
                       </Group>
@@ -642,7 +642,7 @@
                                   <Component id="btn_buygrande_f5" alignment="3" min="-2" max="-2" attributes="0"/>
                                   <Component id="btn_buyproject_f5" alignment="3" min="-2" max="-2" attributes="0"/>
                               </Group>
-                              <EmptySpace pref="142" max="32767" attributes="0"/>
+                              <EmptySpace pref="131" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                     </DimensionLayout>
@@ -1083,7 +1083,7 @@
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="jTabbedPane2" max="32767" attributes="0"/>
+                      <Component id="jTabbedPane2" pref="447" max="32767" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                   </Group>
               </Group>
@@ -1182,7 +1182,7 @@
                                   <Component id="btn_admin_pwdChange" alignment="3" min="-2" max="-2" attributes="0"/>
                                   <Component id="btn_admin_confirmPwd" alignment="3" min="-2" max="-2" attributes="0"/>
                               </Group>
-                              <EmptySpace pref="164" max="32767" attributes="0"/>
+                              <EmptySpace pref="153" max="32767" attributes="0"/>
                               <Component id="btn_admin_logout" min="-2" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
                           </Group>
@@ -1974,6 +1974,9 @@
                             <Property name="text" type="java.lang.String" value="Restock"/>
                             <Property name="enabled" type="boolean" value="false"/>
                           </Properties>
+                          <Events>
+                            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn_restock_c1tActionPerformed"/>
+                          </Events>
                         </Component>
                         <Component class="javax.swing.JSpinner" name="spn_price_c1t">
                           <Properties>
@@ -2012,6 +2015,9 @@
                             <Property name="text" type="java.lang.String" value="Restock"/>
                             <Property name="enabled" type="boolean" value="false"/>
                           </Properties>
+                          <Events>
+                            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn_restock_c1gActionPerformed"/>
+                          </Events>
                         </Component>
                         <Component class="javax.swing.JSpinner" name="spn_stock_c1g">
                           <Properties>
@@ -2131,6 +2137,9 @@
                             <Property name="text" type="java.lang.String" value="Restock"/>
                             <Property name="enabled" type="boolean" value="false"/>
                           </Properties>
+                          <Events>
+                            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn_restock_c2gActionPerformed"/>
+                          </Events>
                         </Component>
                         <Component class="javax.swing.JButton" name="btn_restock_c2t">
                           <Properties>
@@ -2146,6 +2155,9 @@
                             <Property name="text" type="java.lang.String" value="Restock"/>
                             <Property name="enabled" type="boolean" value="false"/>
                           </Properties>
+                          <Events>
+                            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn_restock_c2tActionPerformed"/>
+                          </Events>
                         </Component>
                         <Component class="javax.swing.JSpinner" name="spn_stock_c2t">
                           <Properties>
@@ -2385,6 +2397,9 @@
                             <Property name="text" type="java.lang.String" value="Restock"/>
                             <Property name="enabled" type="boolean" value="false"/>
                           </Properties>
+                          <Events>
+                            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn_restock_c3tActionPerformed"/>
+                          </Events>
                         </Component>
                         <Component class="javax.swing.JLabel" name="lbl_stock_c3g">
                           <Properties>
@@ -2422,6 +2437,9 @@
                             <Property name="text" type="java.lang.String" value="Restock"/>
                             <Property name="enabled" type="boolean" value="false"/>
                           </Properties>
+                          <Events>
+                            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn_restock_c3gActionPerformed"/>
+                          </Events>
                         </Component>
                         <Component class="javax.swing.JLabel" name="jLabel15">
                           <Properties>
@@ -2537,6 +2555,9 @@
                             <Property name="text" type="java.lang.String" value="Restock"/>
                             <Property name="enabled" type="boolean" value="false"/>
                           </Properties>
+                          <Events>
+                            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn_restock_c4tActionPerformed"/>
+                          </Events>
                         </Component>
                         <Component class="javax.swing.JButton" name="btn_restock_c4g">
                           <Properties>
@@ -2552,6 +2573,9 @@
                             <Property name="text" type="java.lang.String" value="Restock"/>
                             <Property name="enabled" type="boolean" value="false"/>
                           </Properties>
+                          <Events>
+                            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn_restock_c4gActionPerformed"/>
+                          </Events>
                         </Component>
                         <Component class="javax.swing.JSpinner" name="spn_stock_c4g">
                           <Properties>
@@ -2730,6 +2754,9 @@
                             <Property name="text" type="java.lang.String" value="Restock"/>
                             <Property name="enabled" type="boolean" value="false"/>
                           </Properties>
+                          <Events>
+                            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn_restock_c5gActionPerformed"/>
+                          </Events>
                         </Component>
                         <Component class="javax.swing.JLabel" name="lbl_stock_c5g">
                           <Properties>
@@ -2767,6 +2794,9 @@
                             <Property name="text" type="java.lang.String" value="Restock"/>
                             <Property name="enabled" type="boolean" value="false"/>
                           </Properties>
+                          <Events>
+                            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn_restock_c5tActionPerformed"/>
+                          </Events>
                         </Component>
                         <Component class="javax.swing.JLabel" name="lbl_stock_c5t">
                           <Properties>
