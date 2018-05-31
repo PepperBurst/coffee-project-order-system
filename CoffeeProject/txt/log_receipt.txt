@@ -37,3 +37,109 @@ Qty   Item                                        Price
 2    Tall Cafè Americano           240
 1    Grande Cafè Americano           135
 
+OFFICIAL RECEIPT
+Coffee Project
+Wed May 30 10:22:39 CST 2018
+Order:
+Qty   Item                                        Price
+1    Grande Cafè Americano           135
+
+OFFICIAL RECEIPT
+Coffee Project
+Wed May 30 10:45:19 CST 2018
+Cashier: Gab
+Order:
+Qty   Item                                        Price
+1    Tall Cafè Americano           135
+
+OFFICIAL RECEIPT
+Coffee Project
+Wed May 30 10:46:17 CST 2018
+Cashier: Gab
+Order:
+Qty   Item                                        Price
+1    Tall Cafè Americano           135
+
+OFFICIAL RECEIPT
+Coffee Project
+Wed May 30 11:09:11 CST 2018
+Cashier: Gab
+Order:
+Qty   Item                                        Price
+1    Tall Cafè Americano           140
+2    Grande Cafè Americano           270
+1    Tall Cappuccino           130
+1    Grande Cappuccino           145
+1    Tall Cafè Latte           130
+1    Grande Cafè Latte           145
+1    Tall Caramel Latte           155
+1    Grande Caramel Latte           170
+1    Tall Cafè Mocha           145
+1    Grande Cafè Mocha           160
+
+OFFICIAL RECEIPT
+Coffee Project
+Wed May 30 11:20:03 CST 2018
+Cashier: Gab
+Order:
+Qty   Item                                        Price
+1    Tall Cafè Americano           140
+1    Grande Cafè Americano           135
+1    Tall Cappuccino           130
+1    Grande Cappuccino           145
+1    Grande Cafè Latte           145
+2    Tall Caramel Latte           310
+1    Grande Caramel Latte           170
+3    Tall Cafè Mocha           435
+1    Grande Cafè Mocha           160
+Total Price:   1770
+
+OFFICIAL RECEIPT
+Coffee Project
+Wed May 30 11:21:18 CST 2018
+Cashier: Begz
+Order:
+Qty   Item                                        Price
+1    Tall Cafè Americano           140
+Total Price:   140
+
+OFFICIAL RECEIPT
+Coffee Project
+Wed May 30 11:27:38 CST 2018
+Cashier: Begz
+Order:
+Qty   Item                                        Price
+2    Tall Cafè Americano           280
+Total Price:   280
+
+OFFICIAL RECEIPT
+Coffee Project
+Wed May 30 11:29:37 CST 2018
+Cashier: Gab
+Order:
+Qty   Item                                        Price
+1    Grande Cafè Americano           135
+1    Grande Cappuccino           145
+1    Grande Caramel Latte           170
+Total Price:   450
+
+OFFICIAL RECEIPT
+Coffee Project
+Wed May 30 11:30:44 CST 2018
+Cashier: Gab
+Order:
+Qty   Item                                        Price
+2    Grande Cafè Americano           270
+2    Grande Cappuccino           290
+Total Price:   560
+
+OFFICIAL RECEIPT
+Coffee Project
+Wed May 30 11:33:21 CST 2018
+Cashier: Begz
+Order:
+Qty   Item                                        Price
+1    Grande Cafè Americano           135
+1    Grande Cappuccino           145
+Total Price:   280
+

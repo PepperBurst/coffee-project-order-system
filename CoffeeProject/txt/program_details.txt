@@ -1,0 +1,6 @@
+Coffee Project Order System
+Created by: Gabriel V. Estrada
+CPE 345 OOP Project
+Submitted to:
+Engr. Mon Arjay F. Malbog
+2nd Semester S.Y. 2017 - 2018

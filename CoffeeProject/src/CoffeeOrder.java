@@ -27,10 +27,16 @@ public class CoffeeOrder extends javax.swing.JFrame {
     String receipt_log_path;
     Cashier[] admin;
     Cashier currentUser;
+    String[] picture_reference;
+    String program_reference;
+    String receipt_reference;
     /**
      * Creates new form CoffeeOrder
      */
     public CoffeeOrder() {
+        this.picture_reference = new String[] {
+            "img/banner.jpg"
+        };
         this.user_reference = new String[] {
             "txt/cashier_gab.txt",
             "txt/cashier_begz.txt"
@@ -53,6 +59,8 @@ public class CoffeeOrder extends javax.swing.JFrame {
             new Cashier(this.user_reference[0]),
             new Cashier(this.user_reference[1])
         };
+        this.program_reference = "txt/program_details.txt";
+        this.receipt_reference = "txt/log_receipt.txt";
         this.currentUser = null;
         this.stock_f1 = new int[]{30, 30};
         this.stock_f2 = new int[]{30, 30};
@@ -74,6 +82,16 @@ public class CoffeeOrder extends javax.swing.JFrame {
     private void initComponents() {
 
         pnl_main = new javax.swing.JPanel();
+        pnl_openProgram = new javax.swing.JPanel();
+        btn_openProgram = new javax.swing.JButton();
+        btn_closeProgram = new javax.swing.JButton();
+        btn_programDetails = new javax.swing.JButton();
+        pnl_cashier_login = new javax.swing.JPanel();
+        lbl_loginBanner = new javax.swing.JLabel();
+        jLabel21 = new javax.swing.JLabel();
+        pwd_mainCashierPwd = new javax.swing.JPasswordField();
+        btn_mainCashierLogin = new javax.swing.JButton();
+        btn_exitMain = new javax.swing.JButton();
         pnl_client = new javax.swing.JPanel();
         jTabbedPane1 = new javax.swing.JTabbedPane();
         pnl_client_coffee = new javax.swing.JPanel();
@@ -95,30 +113,15 @@ public class CoffeeOrder extends javax.swing.JFrame {
         btn_buytall_c5 = new javax.swing.JButton();
         btn_buygrande_c5 = new javax.swing.JButton();
         lbl_client_img = new javax.swing.JLabel();
-        pnl_client_frappe = new javax.swing.JPanel();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
-        btn_sel_f1 = new javax.swing.JButton();
-        btn_buygrande_f1 = new javax.swing.JButton();
-        btn_buyproject_f1 = new javax.swing.JButton();
-        btn_sel_f2 = new javax.swing.JButton();
-        btn_buygrande_f2 = new javax.swing.JButton();
-        btn_buyproject_f2 = new javax.swing.JButton();
-        btn_sel_f3 = new javax.swing.JButton();
-        btn_buygrande_f3 = new javax.swing.JButton();
-        btn_buyproject_f3 = new javax.swing.JButton();
-        btn_sel_f4 = new javax.swing.JButton();
-        btn_buygrande_f4 = new javax.swing.JButton();
-        btn_buyproject_f4 = new javax.swing.JButton();
-        btn_sel_f5 = new javax.swing.JButton();
-        btn_buygrande_f5 = new javax.swing.JButton();
-        btn_buyproject_f5 = new javax.swing.JButton();
         pnl_client_receipt = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
         tbl_client_receipt = new javax.swing.JTable();
         btn_client_confirm = new javax.swing.JButton();
         btn_client_cancel = new javax.swing.JButton();
         btn_adminLogin = new javax.swing.JButton();
+        btn_clientExit = new javax.swing.JButton();
+        jLabel3 = new javax.swing.JLabel();
+        lbl_totalPrice = new javax.swing.JLabel();
         pnl_admin = new javax.swing.JPanel();
         jTabbedPane2 = new javax.swing.JTabbedPane();
         pnl_admin_main = new javax.swing.JPanel();
@@ -216,6 +219,11 @@ public class CoffeeOrder extends javax.swing.JFrame {
         jLabel19 = new javax.swing.JLabel();
         jLabel20 = new javax.swing.JLabel();
         btn_inv_c5 = new javax.swing.JButton();
+        jScrollPane3 = new javax.swing.JScrollPane();
+        pnl_admin_receipt = new javax.swing.JPanel();
+        jScrollPane4 = new javax.swing.JScrollPane();
+        jTextArea1 = new javax.swing.JTextArea();
+        btn_show_receipts = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMaximumSize(new java.awt.Dimension(848, 480));
@@ -225,6 +233,136 @@ public class CoffeeOrder extends javax.swing.JFrame {
 
         pnl_main.setBackground(new java.awt.Color(0, 0, 0));
         pnl_main.setLayout(new java.awt.CardLayout());
+
+        pnl_openProgram.setBackground(new java.awt.Color(0, 0, 0));
+
+        btn_openProgram.setBackground(new java.awt.Color(0, 0, 0));
+        btn_openProgram.setFont(new java.awt.Font("Arial", 0, 96)); // NOI18N
+        btn_openProgram.setForeground(new java.awt.Color(255, 255, 255));
+        btn_openProgram.setText("Open Program");
+        btn_openProgram.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_openProgramActionPerformed(evt);
+            }
+        });
+
+        btn_closeProgram.setBackground(new java.awt.Color(0, 0, 0));
+        btn_closeProgram.setFont(new java.awt.Font("Arial", 0, 96)); // NOI18N
+        btn_closeProgram.setForeground(new java.awt.Color(255, 255, 255));
+        btn_closeProgram.setText("Close");
+        btn_closeProgram.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_closeProgramActionPerformed(evt);
+            }
+        });
+
+        btn_programDetails.setBackground(new java.awt.Color(0, 0, 0));
+        btn_programDetails.setFont(new java.awt.Font("Arial", 0, 96)); // NOI18N
+        btn_programDetails.setForeground(new java.awt.Color(255, 255, 255));
+        btn_programDetails.setText("Program Details");
+        btn_programDetails.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_programDetailsActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout pnl_openProgramLayout = new javax.swing.GroupLayout(pnl_openProgram);
+        pnl_openProgram.setLayout(pnl_openProgramLayout);
+        pnl_openProgramLayout.setHorizontalGroup(
+            pnl_openProgramLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnl_openProgramLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(pnl_openProgramLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(btn_openProgram, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(btn_closeProgram, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 808, Short.MAX_VALUE)
+                    .addComponent(btn_programDetails, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap())
+        );
+        pnl_openProgramLayout.setVerticalGroup(
+            pnl_openProgramLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnl_openProgramLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(btn_openProgram, javax.swing.GroupLayout.PREFERRED_SIZE, 159, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(btn_programDetails, javax.swing.GroupLayout.DEFAULT_SIZE, 168, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(btn_closeProgram)
+                .addContainerGap())
+        );
+
+        pnl_main.add(pnl_openProgram, "card5");
+
+        pnl_cashier_login.setBackground(new java.awt.Color(0, 0, 0));
+
+        lbl_loginBanner.setBackground(new java.awt.Color(0, 0, 0));
+        lbl_loginBanner.setFont(new java.awt.Font("Arial", 0, 72)); // NOI18N
+        lbl_loginBanner.setForeground(new java.awt.Color(255, 255, 255));
+        lbl_loginBanner.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+
+        jLabel21.setBackground(new java.awt.Color(0, 0, 0));
+        jLabel21.setFont(new java.awt.Font("Arial", 0, 48)); // NOI18N
+        jLabel21.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel21.setText("Password:");
+
+        pwd_mainCashierPwd.setBackground(new java.awt.Color(0, 0, 0));
+        pwd_mainCashierPwd.setFont(new java.awt.Font("Arial", 0, 48)); // NOI18N
+        pwd_mainCashierPwd.setForeground(new java.awt.Color(255, 255, 255));
+
+        btn_mainCashierLogin.setBackground(new java.awt.Color(0, 0, 0));
+        btn_mainCashierLogin.setFont(new java.awt.Font("Arial", 0, 48)); // NOI18N
+        btn_mainCashierLogin.setForeground(new java.awt.Color(255, 255, 255));
+        btn_mainCashierLogin.setText("Login");
+        btn_mainCashierLogin.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_mainCashierLoginActionPerformed(evt);
+            }
+        });
+
+        btn_exitMain.setBackground(new java.awt.Color(0, 0, 0));
+        btn_exitMain.setFont(new java.awt.Font("Arial", 0, 48)); // NOI18N
+        btn_exitMain.setForeground(new java.awt.Color(255, 255, 255));
+        btn_exitMain.setText("Exit");
+        btn_exitMain.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_exitMainActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout pnl_cashier_loginLayout = new javax.swing.GroupLayout(pnl_cashier_login);
+        pnl_cashier_login.setLayout(pnl_cashier_loginLayout);
+        pnl_cashier_loginLayout.setHorizontalGroup(
+            pnl_cashier_loginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnl_cashier_loginLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(lbl_loginBanner, javax.swing.GroupLayout.PREFERRED_SIZE, 458, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(pnl_cashier_loginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(pnl_cashier_loginLayout.createSequentialGroup()
+                        .addComponent(jLabel21)
+                        .addGap(0, 121, Short.MAX_VALUE))
+                    .addComponent(pwd_mainCashierPwd)
+                    .addComponent(btn_mainCashierLogin, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(btn_exitMain, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap())
+        );
+        pnl_cashier_loginLayout.setVerticalGroup(
+            pnl_cashier_loginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnl_cashier_loginLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(pnl_cashier_loginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(pnl_cashier_loginLayout.createSequentialGroup()
+                        .addComponent(jLabel21)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(pwd_mainCashierPwd, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 198, Short.MAX_VALUE)
+                        .addComponent(btn_mainCashierLogin)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(btn_exitMain))
+                    .addComponent(lbl_loginBanner, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap())
+        );
+
+        pnl_main.add(pnl_cashier_login, "card4");
 
         pnl_client.setBackground(new java.awt.Color(0, 0, 0));
         pnl_client.setPreferredSize(new java.awt.Dimension(828, 480));
@@ -426,7 +564,7 @@ public class CoffeeOrder extends javax.swing.JFrame {
                                 .addComponent(btn_buytall_c5))
                             .addGroup(pnl_client_coffeeLayout.createSequentialGroup()
                                 .addComponent(btn_sel_c1)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 91, Short.MAX_VALUE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 35, Short.MAX_VALUE)
                                 .addComponent(btn_buytall_c1))
                             .addGroup(pnl_client_coffeeLayout.createSequentialGroup()
                                 .addGap(0, 0, Short.MAX_VALUE)
@@ -490,205 +628,11 @@ public class CoffeeOrder extends javax.swing.JFrame {
                     .addComponent(btn_buytall_c5)
                     .addComponent(btn_buygrande_c5))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(lbl_client_img, javax.swing.GroupLayout.DEFAULT_SIZE, 114, Short.MAX_VALUE)
+                .addComponent(lbl_client_img, javax.swing.GroupLayout.DEFAULT_SIZE, 125, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
         jTabbedPane1.addTab("Coffee", pnl_client_coffee);
-
-        pnl_client_frappe.setBackground(new java.awt.Color(0, 0, 0));
-
-        jLabel3.setBackground(new java.awt.Color(0, 0, 0));
-        jLabel3.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel3.setText("Grande");
-
-        jLabel4.setBackground(new java.awt.Color(0, 0, 0));
-        jLabel4.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
-        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel4.setText("Project");
-
-        btn_sel_f1.setBackground(new java.awt.Color(0, 0, 0));
-        btn_sel_f1.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
-        btn_sel_f1.setForeground(new java.awt.Color(255, 255, 255));
-        btn_sel_f1.setText("Dark Chocolate");
-        btn_sel_f1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btn_sel_f1ActionPerformed(evt);
-            }
-        });
-
-        btn_buygrande_f1.setBackground(new java.awt.Color(0, 0, 0));
-        btn_buygrande_f1.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
-        btn_buygrande_f1.setForeground(new java.awt.Color(255, 255, 255));
-        btn_buygrande_f1.setText("160");
-        btn_buygrande_f1.setEnabled(false);
-
-        btn_buyproject_f1.setBackground(new java.awt.Color(0, 0, 0));
-        btn_buyproject_f1.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
-        btn_buyproject_f1.setForeground(new java.awt.Color(255, 255, 255));
-        btn_buyproject_f1.setText("175");
-        btn_buyproject_f1.setEnabled(false);
-
-        btn_sel_f2.setBackground(new java.awt.Color(0, 0, 0));
-        btn_sel_f2.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
-        btn_sel_f2.setForeground(new java.awt.Color(255, 255, 255));
-        btn_sel_f2.setText("Vanilla Macadamia");
-        btn_sel_f2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btn_sel_f2ActionPerformed(evt);
-            }
-        });
-
-        btn_buygrande_f2.setBackground(new java.awt.Color(0, 0, 0));
-        btn_buygrande_f2.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
-        btn_buygrande_f2.setForeground(new java.awt.Color(255, 255, 255));
-        btn_buygrande_f2.setText("160");
-        btn_buygrande_f2.setEnabled(false);
-
-        btn_buyproject_f2.setBackground(new java.awt.Color(0, 0, 0));
-        btn_buyproject_f2.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
-        btn_buyproject_f2.setForeground(new java.awt.Color(255, 255, 255));
-        btn_buyproject_f2.setText("175");
-        btn_buyproject_f2.setEnabled(false);
-
-        btn_sel_f3.setBackground(new java.awt.Color(0, 0, 0));
-        btn_sel_f3.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
-        btn_sel_f3.setForeground(new java.awt.Color(255, 255, 255));
-        btn_sel_f3.setText("Chocolate Cookie");
-        btn_sel_f3.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btn_sel_f3ActionPerformed(evt);
-            }
-        });
-
-        btn_buygrande_f3.setBackground(new java.awt.Color(0, 0, 0));
-        btn_buygrande_f3.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
-        btn_buygrande_f3.setForeground(new java.awt.Color(255, 255, 255));
-        btn_buygrande_f3.setText("180");
-        btn_buygrande_f3.setEnabled(false);
-
-        btn_buyproject_f3.setBackground(new java.awt.Color(0, 0, 0));
-        btn_buyproject_f3.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
-        btn_buyproject_f3.setForeground(new java.awt.Color(255, 255, 255));
-        btn_buyproject_f3.setText("195");
-        btn_buyproject_f3.setEnabled(false);
-
-        btn_sel_f4.setBackground(new java.awt.Color(0, 0, 0));
-        btn_sel_f4.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
-        btn_sel_f4.setForeground(new java.awt.Color(255, 255, 255));
-        btn_sel_f4.setText("Caramel Vanilla");
-        btn_sel_f4.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btn_sel_f4ActionPerformed(evt);
-            }
-        });
-
-        btn_buygrande_f4.setBackground(new java.awt.Color(0, 0, 0));
-        btn_buygrande_f4.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
-        btn_buygrande_f4.setForeground(new java.awt.Color(255, 255, 255));
-        btn_buygrande_f4.setText("165");
-        btn_buygrande_f4.setEnabled(false);
-
-        btn_buyproject_f4.setBackground(new java.awt.Color(0, 0, 0));
-        btn_buyproject_f4.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
-        btn_buyproject_f4.setForeground(new java.awt.Color(255, 255, 255));
-        btn_buyproject_f4.setText("180");
-        btn_buyproject_f4.setEnabled(false);
-
-        btn_sel_f5.setBackground(new java.awt.Color(0, 0, 0));
-        btn_sel_f5.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
-        btn_sel_f5.setForeground(new java.awt.Color(255, 255, 255));
-        btn_sel_f5.setText("Strawberry Vanilla");
-        btn_sel_f5.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btn_sel_f5ActionPerformed(evt);
-            }
-        });
-
-        btn_buygrande_f5.setBackground(new java.awt.Color(0, 0, 0));
-        btn_buygrande_f5.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
-        btn_buygrande_f5.setForeground(new java.awt.Color(255, 255, 255));
-        btn_buygrande_f5.setText("180");
-        btn_buygrande_f5.setEnabled(false);
-
-        btn_buyproject_f5.setBackground(new java.awt.Color(0, 0, 0));
-        btn_buyproject_f5.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
-        btn_buyproject_f5.setForeground(new java.awt.Color(255, 255, 255));
-        btn_buyproject_f5.setText("195");
-        btn_buyproject_f5.setEnabled(false);
-
-        javax.swing.GroupLayout pnl_client_frappeLayout = new javax.swing.GroupLayout(pnl_client_frappe);
-        pnl_client_frappe.setLayout(pnl_client_frappeLayout);
-        pnl_client_frappeLayout.setHorizontalGroup(
-            pnl_client_frappeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(pnl_client_frappeLayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(pnl_client_frappeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(pnl_client_frappeLayout.createSequentialGroup()
-                        .addGroup(pnl_client_frappeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(btn_sel_f1)
-                            .addComponent(btn_sel_f2)
-                            .addComponent(btn_sel_f3)
-                            .addComponent(btn_sel_f4)
-                            .addComponent(btn_sel_f5))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGroup(pnl_client_frappeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(btn_buygrande_f1, javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(btn_buygrande_f2, javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(btn_buygrande_f3, javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(btn_buygrande_f4, javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(btn_buygrande_f5, javax.swing.GroupLayout.Alignment.TRAILING)))
-                    .addGroup(pnl_client_frappeLayout.createSequentialGroup()
-                        .addGap(0, 0, Short.MAX_VALUE)
-                        .addComponent(jLabel3)))
-                .addGap(18, 18, 18)
-                .addGroup(pnl_client_frappeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(pnl_client_frappeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(jLabel4, javax.swing.GroupLayout.Alignment.TRAILING)
-                        .addComponent(btn_buyproject_f1, javax.swing.GroupLayout.Alignment.TRAILING)
-                        .addComponent(btn_buyproject_f2, javax.swing.GroupLayout.Alignment.TRAILING)
-                        .addComponent(btn_buyproject_f3, javax.swing.GroupLayout.Alignment.TRAILING)
-                        .addComponent(btn_buyproject_f4, javax.swing.GroupLayout.Alignment.TRAILING))
-                    .addComponent(btn_buyproject_f5, javax.swing.GroupLayout.Alignment.TRAILING))
-                .addContainerGap())
-        );
-        pnl_client_frappeLayout.setVerticalGroup(
-            pnl_client_frappeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(pnl_client_frappeLayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(pnl_client_frappeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel3)
-                    .addComponent(jLabel4))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(pnl_client_frappeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btn_sel_f1)
-                    .addComponent(btn_buygrande_f1)
-                    .addComponent(btn_buyproject_f1))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(pnl_client_frappeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btn_sel_f2)
-                    .addComponent(btn_buygrande_f2)
-                    .addComponent(btn_buyproject_f2))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(pnl_client_frappeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btn_sel_f3)
-                    .addComponent(btn_buygrande_f3)
-                    .addComponent(btn_buyproject_f3))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(pnl_client_frappeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btn_sel_f4)
-                    .addComponent(btn_buygrande_f4)
-                    .addComponent(btn_buyproject_f4))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(pnl_client_frappeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btn_sel_f5)
-                    .addComponent(btn_buygrande_f5)
-                    .addComponent(btn_buyproject_f5))
-                .addContainerGap(131, Short.MAX_VALUE))
-        );
-
-        jTabbedPane1.addTab("Frappe", pnl_client_frappe);
 
         pnl_client_receipt.setBackground(new java.awt.Color(0, 0, 0));
         pnl_client_receipt.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
@@ -697,6 +641,12 @@ public class CoffeeOrder extends javax.swing.JFrame {
         tbl_client_receipt.setForeground(new java.awt.Color(255, 255, 255));
         tbl_client_receipt.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
                 {null, null, null},
                 {null, null, null},
                 {null, null, null},
@@ -746,12 +696,32 @@ public class CoffeeOrder extends javax.swing.JFrame {
         btn_adminLogin.setBackground(new java.awt.Color(0, 0, 0));
         btn_adminLogin.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
         btn_adminLogin.setForeground(new java.awt.Color(255, 255, 255));
-        btn_adminLogin.setText("Login Admin");
+        btn_adminLogin.setText("Login Cashier");
         btn_adminLogin.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btn_adminLoginActionPerformed(evt);
             }
         });
+
+        btn_clientExit.setBackground(new java.awt.Color(0, 0, 0));
+        btn_clientExit.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
+        btn_clientExit.setForeground(new java.awt.Color(255, 255, 255));
+        btn_clientExit.setText("Exit");
+        btn_clientExit.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_clientExitActionPerformed(evt);
+            }
+        });
+
+        jLabel3.setBackground(new java.awt.Color(0, 0, 0));
+        jLabel3.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel3.setText("Total Price:");
+
+        lbl_totalPrice.setBackground(new java.awt.Color(0, 0, 0));
+        lbl_totalPrice.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
+        lbl_totalPrice.setForeground(new java.awt.Color(255, 255, 255));
+        lbl_totalPrice.setText("0");
 
         javax.swing.GroupLayout pnl_client_receiptLayout = new javax.swing.GroupLayout(pnl_client_receipt);
         pnl_client_receipt.setLayout(pnl_client_receiptLayout);
@@ -763,20 +733,33 @@ public class CoffeeOrder extends javax.swing.JFrame {
                     .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
                     .addComponent(btn_client_confirm, javax.swing.GroupLayout.DEFAULT_SIZE, 341, Short.MAX_VALUE)
                     .addComponent(btn_client_cancel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(btn_adminLogin, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(pnl_client_receiptLayout.createSequentialGroup()
+                        .addComponent(btn_adminLogin)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(btn_clientExit, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(pnl_client_receiptLayout.createSequentialGroup()
+                        .addComponent(jLabel3)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(lbl_totalPrice)))
                 .addContainerGap())
         );
         pnl_client_receiptLayout.setVerticalGroup(
             pnl_client_receiptLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(pnl_client_receiptLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 292, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 229, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(pnl_client_receiptLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel3)
+                    .addComponent(lbl_totalPrice))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(btn_client_confirm)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(btn_client_cancel)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(btn_adminLogin)
+                .addGroup(pnl_client_receiptLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btn_adminLogin)
+                    .addComponent(btn_clientExit))
                 .addContainerGap())
         );
 
@@ -786,7 +769,7 @@ public class CoffeeOrder extends javax.swing.JFrame {
             pnl_clientLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(pnl_clientLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jTabbedPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 437, Short.MAX_VALUE)
+                .addComponent(jTabbedPane1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(pnl_client_receipt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
@@ -813,7 +796,7 @@ public class CoffeeOrder extends javax.swing.JFrame {
         btn_admin_logout.setBackground(new java.awt.Color(0, 0, 0));
         btn_admin_logout.setFont(new java.awt.Font("Arial", 0, 36)); // NOI18N
         btn_admin_logout.setForeground(new java.awt.Color(255, 255, 255));
-        btn_admin_logout.setText("Logout");
+        btn_admin_logout.setText("Back to client page");
         btn_admin_logout.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btn_admin_logoutActionPerformed(evt);
@@ -918,7 +901,7 @@ public class CoffeeOrder extends javax.swing.JFrame {
                 .addGroup(pnl_admin_mainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btn_admin_pwdChange)
                     .addComponent(btn_admin_confirmPwd))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 153, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 164, Short.MAX_VALUE)
                 .addComponent(btn_admin_logout)
                 .addContainerGap())
         );
@@ -1809,6 +1792,47 @@ public class CoffeeOrder extends javax.swing.JFrame {
 
         jTabbedPane2.addTab("Inventory", jScrollPane2);
 
+        pnl_admin_receipt.setBackground(new java.awt.Color(0, 0, 0));
+
+        jTextArea1.setColumns(20);
+        jTextArea1.setRows(5);
+        jScrollPane4.setViewportView(jTextArea1);
+
+        btn_show_receipts.setBackground(new java.awt.Color(0, 0, 0));
+        btn_show_receipts.setFont(new java.awt.Font("Arial", 0, 36)); // NOI18N
+        btn_show_receipts.setForeground(new java.awt.Color(255, 255, 255));
+        btn_show_receipts.setText("Show Receipts");
+        btn_show_receipts.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_show_receiptsActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout pnl_admin_receiptLayout = new javax.swing.GroupLayout(pnl_admin_receipt);
+        pnl_admin_receipt.setLayout(pnl_admin_receiptLayout);
+        pnl_admin_receiptLayout.setHorizontalGroup(
+            pnl_admin_receiptLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnl_admin_receiptLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(pnl_admin_receiptLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jScrollPane4)
+                    .addComponent(btn_show_receipts, javax.swing.GroupLayout.DEFAULT_SIZE, 777, Short.MAX_VALUE))
+                .addContainerGap())
+        );
+        pnl_admin_receiptLayout.setVerticalGroup(
+            pnl_admin_receiptLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnl_admin_receiptLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(btn_show_receipts)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jScrollPane4, javax.swing.GroupLayout.DEFAULT_SIZE, 316, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+
+        jScrollPane3.setViewportView(pnl_admin_receipt);
+
+        jTabbedPane2.addTab("Receipt", jScrollPane3);
+
         javax.swing.GroupLayout pnl_adminLayout = new javax.swing.GroupLayout(pnl_admin);
         pnl_admin.setLayout(pnl_adminLayout);
         pnl_adminLayout.setHorizontalGroup(
@@ -1822,7 +1846,7 @@ public class CoffeeOrder extends javax.swing.JFrame {
             pnl_adminLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(pnl_adminLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jTabbedPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 447, Short.MAX_VALUE)
+                .addComponent(jTabbedPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 458, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
@@ -1847,372 +1871,6 @@ public class CoffeeOrder extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btn_sel_c1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_sel_c1ActionPerformed
-        // TODO add your handling code here:
-        btn_buytall_c1.setText(Integer.toString(this.coffee[0].getPrice(0)));
-        btn_buygrande_c1.setText(Integer.toString(this.coffee[0].getPrice(1)));
-        if(btn_buytall_c1.isEnabled()){
-            btn_buytall_c1.setEnabled(false);
-            btn_buygrande_c1.setEnabled(false);
-            lbl_client_img.setIcon(null);
-        }else{
-            BufferedImage img;
-            try{
-                img = ImageIO.read(new File(this.coffee[0].getImgPath()));
-                Image dimg = img.getScaledInstance(lbl_client_img.getWidth(),
-                        lbl_client_img.getHeight(), Image.SCALE_SMOOTH);
-                ImageIcon imageIcon = new ImageIcon(dimg);
-                lbl_client_img.setIcon(imageIcon);
-            }catch(IOException e){
-                JOptionPane.showMessageDialog(this, "Error:\n" + e);
-            }
-            btn_buytall_c1.setEnabled(true);
-            btn_buygrande_c1.setEnabled(true);
-        }
-    }//GEN-LAST:event_btn_sel_c1ActionPerformed
-
-    private void btn_sel_c2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_sel_c2ActionPerformed
-        // TODO add your handling code here:
-        btn_buytall_c2.setText(Integer.toString(this.coffee[1].getPrice(0)));
-        btn_buygrande_c2.setText(Integer.toString(this.coffee[1].getPrice(1)));
-        if(btn_buytall_c2.isEnabled()){
-            btn_buytall_c2.setEnabled(false);
-            btn_buygrande_c2.setEnabled(false);
-            lbl_client_img.setIcon(null);
-        }else{
-            BufferedImage img;
-            try{
-                img = ImageIO.read(new File(this.coffee[1].getImgPath()));
-                Image dimg = img.getScaledInstance(lbl_client_img.getWidth(),
-                        lbl_client_img.getHeight(), Image.SCALE_SMOOTH);
-                ImageIcon imageIcon = new ImageIcon(dimg);
-                lbl_client_img.setIcon(imageIcon);
-            }catch(IOException e){
-                JOptionPane.showMessageDialog(this, "Error:\n" + e);
-            }
-            btn_buytall_c2.setEnabled(true);
-            btn_buygrande_c2.setEnabled(true);
-        }
-    }//GEN-LAST:event_btn_sel_c2ActionPerformed
-
-    private void btn_sel_c3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_sel_c3ActionPerformed
-        // TODO add your handling code here:
-        btn_buytall_c3.setText(Integer.toString(this.coffee[2].getPrice(0)));
-        btn_buygrande_c3.setText(Integer.toString(this.coffee[2].getPrice(1)));
-        if(btn_buytall_c3.isEnabled()){
-            btn_buytall_c3.setEnabled(false);
-            btn_buygrande_c3.setEnabled(false);
-            lbl_client_img.setIcon(null);
-        }else{
-            BufferedImage img;
-            try{
-                img = ImageIO.read(new File(this.coffee[2].getImgPath()));
-                Image dimg = img.getScaledInstance(lbl_client_img.getWidth(),
-                        lbl_client_img.getHeight(), Image.SCALE_SMOOTH);
-                ImageIcon imageIcon = new ImageIcon(dimg);
-                lbl_client_img.setIcon(imageIcon);
-            }catch(IOException e){
-                JOptionPane.showMessageDialog(this, "Error:\n" + e);
-            }
-            btn_buytall_c3.setEnabled(true);
-            btn_buygrande_c3.setEnabled(true);
-        }
-    }//GEN-LAST:event_btn_sel_c3ActionPerformed
-
-    private void btn_sel_c4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_sel_c4ActionPerformed
-        // TODO add your handling code here:
-        btn_buytall_c4.setText(Integer.toString(this.coffee[3].getPrice(0)));
-        btn_buygrande_c4.setText(Integer.toString(this.coffee[3].getPrice(1)));
-        if(btn_buytall_c4.isEnabled()){
-            btn_buytall_c4.setEnabled(false);
-            btn_buygrande_c4.setEnabled(false);
-            lbl_client_img.setIcon(null);
-        }else{
-            BufferedImage img;
-            try{
-                img = ImageIO.read(new File(this.coffee[3].getImgPath()));
-                Image dimg = img.getScaledInstance(lbl_client_img.getWidth(),
-                        lbl_client_img.getHeight(), Image.SCALE_SMOOTH);
-                ImageIcon imageIcon = new ImageIcon(dimg);
-                lbl_client_img.setIcon(imageIcon);
-            }catch(IOException e){
-                JOptionPane.showMessageDialog(this, "Error:\n" + e);
-            }
-            btn_buytall_c4.setEnabled(true);
-            btn_buygrande_c4.setEnabled(true);
-        }
-    }//GEN-LAST:event_btn_sel_c4ActionPerformed
-
-    private void btn_sel_c5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_sel_c5ActionPerformed
-        // TODO add your handling code here:
-        btn_buytall_c5.setText(Integer.toString(this.coffee[4].getPrice(0)));
-        btn_buygrande_c5.setText(Integer.toString(this.coffee[4].getPrice(1)));
-        if(btn_buytall_c5.isEnabled()){
-            btn_buytall_c5.setEnabled(false);
-            btn_buygrande_c5.setEnabled(false);
-            lbl_client_img.setIcon(null);
-        }else{
-            BufferedImage img;
-            try{
-                img = ImageIO.read(new File(this.coffee[4].getImgPath()));
-                Image dimg = img.getScaledInstance(lbl_client_img.getWidth(),
-                        lbl_client_img.getHeight(), Image.SCALE_SMOOTH);
-                ImageIcon imageIcon = new ImageIcon(dimg);
-                lbl_client_img.setIcon(imageIcon);
-            }catch(IOException e){
-                JOptionPane.showMessageDialog(this, "Error:\n" + e);
-            }
-            btn_buytall_c5.setEnabled(true);
-            btn_buygrande_c5.setEnabled(true);
-        }
-    }//GEN-LAST:event_btn_sel_c5ActionPerformed
-
-    private void btn_sel_f1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_sel_f1ActionPerformed
-        // TODO add your handling code here:
-        if(btn_buygrande_f1.isEnabled()){
-            btn_buygrande_f1.setEnabled(false);
-            btn_buyproject_f1.setEnabled(false);
-        }else{
-            btn_buygrande_f1.setEnabled(true);
-            btn_buyproject_f1.setEnabled(true);
-        }
-    }//GEN-LAST:event_btn_sel_f1ActionPerformed
-
-    private void btn_sel_f2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_sel_f2ActionPerformed
-        // TODO add your handling code here:
-        if(btn_buygrande_f2.isEnabled()){
-            btn_buygrande_f2.setEnabled(false);
-            btn_buyproject_f2.setEnabled(false);
-        }else{
-            btn_buygrande_f2.setEnabled(true);
-            btn_buyproject_f2.setEnabled(true);
-        }
-    }//GEN-LAST:event_btn_sel_f2ActionPerformed
-
-    private void btn_sel_f3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_sel_f3ActionPerformed
-        // TODO add your handling code here:
-        if(btn_buygrande_f3.isEnabled()){
-            btn_buygrande_f3.setEnabled(false);
-            btn_buyproject_f3.setEnabled(false);
-        }else{
-            btn_buygrande_f3.setEnabled(true);
-            btn_buyproject_f3.setEnabled(true);
-        }
-    }//GEN-LAST:event_btn_sel_f3ActionPerformed
-
-    private void btn_sel_f4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_sel_f4ActionPerformed
-        // TODO add your handling code here
-        if(btn_buygrande_f4.isEnabled()){
-            btn_buygrande_f4.setEnabled(false);
-            btn_buyproject_f4.setEnabled(false);
-        }else{
-            btn_buygrande_f4.setEnabled(true);
-            btn_buyproject_f4.setEnabled(true);
-        }
-    }//GEN-LAST:event_btn_sel_f4ActionPerformed
-
-    private void btn_sel_f5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_sel_f5ActionPerformed
-        // TODO add your handling code here:
-        if(btn_buygrande_f5.isEnabled()){
-            btn_buygrande_f5.setEnabled(false);
-            btn_buyproject_f5.setEnabled(false);
-        }else{
-            btn_buygrande_f5.setEnabled(true);
-            btn_buyproject_f5.setEnabled(true);
-        }
-    }//GEN-LAST:event_btn_sel_f5ActionPerformed
-
-    private void btn_buytall_c1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_buytall_c1ActionPerformed
-        // TODO add your handling code here:
-//        if(stock_c[0][0]!=0){
-        if(coffee[0].getQuantity(0)!=0){
-            int dialogResult = JOptionPane.showConfirmDialog(null,
-                    "Order Tall Cafè Americano?", "Confirm order",
-                    JOptionPane.YES_NO_OPTION);
-            if(dialogResult==JOptionPane.YES_OPTION){
-                btn_buytall_c1.setEnabled(false);
-                btn_buygrande_c1.setEnabled(false);
-                this.client_order_list[0]++;
-                this.refreshReceipt();
-                coffee[0].setQuantity(0,
-                        coffee[0].getQuantity(0) - this.client_order_list[0]);
-            }
-        }
-        btn_buytall_c1.setEnabled(false);
-        btn_buygrande_c1.setEnabled(false);
-    }//GEN-LAST:event_btn_buytall_c1ActionPerformed
-
-    private void btn_buygrande_c1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_buygrande_c1ActionPerformed
-        // TODO add your handling code here:
-        if(coffee[0].getQuantity(1)!=0){
-            int dialogResult = JOptionPane.showConfirmDialog(null,
-                    "Order Grande Cafè Americano?", "Confirm order",
-                    JOptionPane.YES_NO_OPTION);
-            if(dialogResult==JOptionPane.YES_OPTION){
-                btn_buytall_c1.setEnabled(false);
-                btn_buygrande_c1.setEnabled(false);
-                this.client_order_list[1]++;
-                this.refreshReceipt();
-                coffee[0].setQuantity(1,
-                        coffee[0].getQuantity(1) - this.client_order_list[1]);
-            }
-        }
-        btn_buytall_c1.setEnabled(false);
-        btn_buygrande_c1.setEnabled(false);
-    }//GEN-LAST:event_btn_buygrande_c1ActionPerformed
-
-    private void btn_buytall_c2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_buytall_c2ActionPerformed
-        // TODO add your handling code here:
-        if(coffee[1].getQuantity(0)!=0){
-            int dialogResult = JOptionPane.showConfirmDialog(null,
-                    "Order Tall Cappuccino?", "Confirm order",
-                    JOptionPane.YES_NO_OPTION);
-            if(dialogResult==JOptionPane.YES_OPTION){
-                btn_buytall_c2.setEnabled(false);
-                btn_buygrande_c2.setEnabled(false);
-                this.client_order_list[2]++;
-                this.refreshReceipt();
-                coffee[1].setQuantity(0,
-                        coffee[1].getQuantity(0) - this.client_order_list[2]);
-            }
-        }
-        btn_buytall_c2.setEnabled(false);
-        btn_buygrande_c2.setEnabled(false);
-    }//GEN-LAST:event_btn_buytall_c2ActionPerformed
-
-    private void btn_buygrande_c2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_buygrande_c2ActionPerformed
-        // TODO add your handling code here:
-        if(coffee[1].getQuantity(1)!=0){
-            int dialogResult = JOptionPane.showConfirmDialog(null,
-                    "Order Grande Cappuccino?", "Confirm order",
-                    JOptionPane.YES_NO_OPTION);
-            if(dialogResult==JOptionPane.YES_OPTION){
-                btn_buytall_c2.setEnabled(false);
-                btn_buygrande_c2.setEnabled(false);
-                this.client_order_list[3]++;
-                this.refreshReceipt();
-                coffee[1].setQuantity(1,
-                        coffee[1].getQuantity(1) - this.client_order_list[3]);
-            }
-        }
-        btn_buytall_c2.setEnabled(false);
-        btn_buygrande_c2.setEnabled(false);
-    }//GEN-LAST:event_btn_buygrande_c2ActionPerformed
-
-    private void btn_buytall_c3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_buytall_c3ActionPerformed
-        // TODO add your handling code here:
-        if(coffee[2].getQuantity(0)!=0){
-            int dialogResult = JOptionPane.showConfirmDialog(null,
-                    "Order Tall Cafè Latte?", "Confirm order",
-                    JOptionPane.YES_NO_OPTION);
-            if(dialogResult==JOptionPane.YES_OPTION){
-                btn_buytall_c3.setEnabled(false);
-                btn_buygrande_c3.setEnabled(false);
-                this.client_order_list[4]++;
-                this.refreshReceipt();
-                coffee[2].setQuantity(0,
-                        coffee[2].getQuantity(0) - this.client_order_list[4]);
-            }
-        }
-        btn_buytall_c3.setEnabled(false);
-        btn_buygrande_c3.setEnabled(false);
-    }//GEN-LAST:event_btn_buytall_c3ActionPerformed
-
-    private void btn_buygrande_c3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_buygrande_c3ActionPerformed
-        // TODO add your handling code here:
-        if(coffee[2].getQuantity(1)!=0){
-            int dialogResult = JOptionPane.showConfirmDialog(null,
-                    "Order Grande Cafè Latte?", "Confirm order",
-                    JOptionPane.YES_NO_OPTION);
-            if(dialogResult==JOptionPane.YES_OPTION){
-                btn_buytall_c3.setEnabled(false);
-                btn_buygrande_c3.setEnabled(false);
-                this.client_order_list[5]++;
-                this.refreshReceipt();
-                coffee[2].setQuantity(1,
-                        coffee[2].getQuantity(1) - this.client_order_list[5]);
-            }
-        }
-        btn_buytall_c3.setEnabled(false);
-        btn_buygrande_c3.setEnabled(false);
-    }//GEN-LAST:event_btn_buygrande_c3ActionPerformed
-
-    private void btn_buytall_c4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_buytall_c4ActionPerformed
-        // TODO add your handling code here:
-        if(coffee[3].getQuantity(0)!=0){
-            int dialogResult = JOptionPane.showConfirmDialog(null,
-                    "Order Tall Caramel Latte?","Confirm order",
-                    JOptionPane.YES_NO_OPTION);
-            if(dialogResult==JOptionPane.YES_OPTION){
-                btn_buytall_c4.setEnabled(false);
-                btn_buygrande_c4.setEnabled(false);
-                this.client_order_list[6]++;
-                this.refreshReceipt();
-                coffee[3].setQuantity(0,
-                        coffee[3].getQuantity(0) - this.client_order_list[6]);
-            }
-        }
-        btn_buytall_c4.setEnabled(false);
-        btn_buygrande_c4.setEnabled(false);
-    }//GEN-LAST:event_btn_buytall_c4ActionPerformed
-
-    private void btn_buygrande_c4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_buygrande_c4ActionPerformed
-        // TODO add your handling code here:
-        if(coffee[3].getQuantity(1)!=0){
-            int dialogResult = JOptionPane.showConfirmDialog(null,
-                    "Order Grande Caramel Latte?", "Confirm order",
-                    JOptionPane.YES_NO_OPTION);
-            if(dialogResult==JOptionPane.YES_OPTION){
-                btn_buytall_c4.setEnabled(false);
-                btn_buygrande_c4.setEnabled(false);
-                this.client_order_list[7]++;
-                this.refreshReceipt();
-                coffee[3].setQuantity(1,
-                        coffee[3].getQuantity(1) - this.client_order_list[7]);
-            }
-        }
-        btn_buytall_c4.setEnabled(false);
-        btn_buygrande_c4.setEnabled(false);
-    }//GEN-LAST:event_btn_buygrande_c4ActionPerformed
-
-    private void btn_buytall_c5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_buytall_c5ActionPerformed
-        // TODO add your handling code here:
-        if(coffee[4].getQuantity(0)!=0){
-            int dialogResult = JOptionPane.showConfirmDialog(null,
-                    "Order Tall Cafè Mocha?", "Confirm order",
-                    JOptionPane.YES_NO_OPTION);
-            if(dialogResult==JOptionPane.YES_OPTION){
-                btn_buytall_c5.setEnabled(false);
-                btn_buygrande_c5.setEnabled(false);
-                this.client_order_list[8]++;
-                this.refreshReceipt();
-                coffee[4].setQuantity(0,
-                        coffee[4].getQuantity(0) - this.client_order_list[8]);
-            }
-        }
-        btn_buytall_c5.setEnabled(false);
-        btn_buygrande_c5.setEnabled(false);
-    }//GEN-LAST:event_btn_buytall_c5ActionPerformed
-
-    private void btn_buygrande_c5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_buygrande_c5ActionPerformed
-        // TODO add your handling code here:
-        if(coffee[4].getQuantity(1)!=0){
-            int dialogResult = JOptionPane.showConfirmDialog(null,
-                    "Order Grande Cafè Mocha?", "Confirm order",
-                    JOptionPane.YES_NO_OPTION);
-            if(dialogResult==JOptionPane.YES_OPTION){
-                btn_buytall_c5.setEnabled(false);
-                btn_buygrande_c5.setEnabled(false);
-                this.client_order_list[9]++;
-                this.refreshReceipt();
-                coffee[4].setQuantity(1,
-                        coffee[4].getQuantity(1) - this.client_order_list[9]);
-            }
-        }
-        btn_buytall_c5.setEnabled(false);
-        btn_buygrande_c5.setEnabled(false);
-    }//GEN-LAST:event_btn_buygrande_c5ActionPerformed
-
     private void btn_client_confirmActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_client_confirmActionPerformed
         // TODO add your handling code here:
         boolean empty_order = true;
@@ -2222,70 +1880,97 @@ public class CoffeeOrder extends javax.swing.JFrame {
             }
         }
         if(!empty_order){
-            Date now = new Date();
-            String orderReceipt = "OFFICIAL RECEIPT\nCoffee Project\r\n"
-                    + now
-                    + "\r\nOrder:\r\nQty   Item                                        Price\r\n";
-            for(int i=0; i<this.client_order_list.length; i++){
-                if(this.client_order_list[i] > 0){
-                    orderReceipt += this.client_order_list[i] + "    ";
-                    orderReceipt += this.returnOrderString(i) + "           ";
-                    orderReceipt += this.returnOrderPrice(i) * this.client_order_list[i] + "\r\n";
-                }
-            }
-            int dialogResult = JOptionPane.showConfirmDialog(null, orderReceipt,
-                    "Confirm order", JOptionPane.YES_NO_OPTION);
-            if(dialogResult==JOptionPane.YES_OPTION){
-                for(int i=0; i<tbl_client_receipt.getRowCount(); i++){
-                    for(int j=0; j<tbl_client_receipt.getColumnCount(); j++){
-                        tbl_client_receipt.setValueAt(null, i, j);
+            int dialogResult1 = JOptionPane.showConfirmDialog(null,
+                "Confirm order?", "Confirm action",
+                JOptionPane.YES_NO_OPTION);
+            if(dialogResult1==JOptionPane.YES_OPTION){
+                Date now = new Date();
+                int totalPrice = 0;
+                String orderReceipt = "OFFICIAL RECEIPT\r\nCoffee Project\r\n"
+                        + now
+                        + "\r\nCashier: " + this.currentUser.getName()
+                        + "\r\nOrder:\r\nQty   Item                                        Price\r\n";
+                for(int i=0; i<this.client_order_list.length; i++){
+                    if(this.client_order_list[i] > 0){
+                        orderReceipt += this.client_order_list[i] + "    ";
+                        orderReceipt += this.returnOrderString(i) + "           ";
+                        orderReceipt += this.returnOrderPrice(i) * this.client_order_list[i] + "\r\n";
+                        totalPrice += this.returnOrderPrice(i) * this.client_order_list[i];
                     }
                 }
-                for(int i=0; i<this.client_order_list.length; i++){
-                    this.client_order_list[i] = 0;
+                orderReceipt += "Total Price:   " + totalPrice + "\r\n";
+                int dialogResult2 = JOptionPane.showConfirmDialog(null, orderReceipt,
+                        "Confirm order", JOptionPane.YES_NO_OPTION);
+                if(dialogResult2==JOptionPane.YES_OPTION){
+                    for(int i=0; i<tbl_client_receipt.getRowCount(); i++){
+                        for(int j=0; j<tbl_client_receipt.getColumnCount(); j++){
+                            tbl_client_receipt.setValueAt(null, i, j);
+                        }
+                    }
+                    for(int i=0; i<this.client_order_list.length; i++){
+                        this.client_order_list[i] = 0;
+                    }
+                    try{
+                        WriteFile data = new WriteFile(receipt_log_path, true);
+                        data.writeToFile(orderReceipt);
+                    }catch(IOException e){
+                        JOptionPane.showMessageDialog(this, "Error:\n" + e);
+                    }
                 }
-                try{
-                    WriteFile data = new WriteFile(receipt_log_path, true);
-                    data.writeToFile(orderReceipt);
-                }catch(IOException e){
-                    JOptionPane.showMessageDialog(this, "Error:\n" + e);
+                for(int i=0; i<coffee.length; i++){
+                    String overwrite = this.coffee[i].getQuantity(0) + "\r\n" +
+                            this.coffee[i].getQuantity(1) + "\r\n" +
+                            this.coffee[i].getPrice(0) + "\r\n" +
+                            this.coffee[i].getPrice(1) + "\r\n" +
+                            this.coffee[i].getImgPath();
+                    try{
+                       WriteFile data = new WriteFile(this.data_reference[i]);
+                       data.writeToFile(overwrite);
+                    }catch(IOException e){
+                        JOptionPane.showMessageDialog(this, "Error:\n" + e);
+                    }
                 }
             }
-            for(int i=0; i<coffee.length; i++){
-                String overwrite = this.coffee[i].getQuantity(0) + "\r\n" +
-                        this.coffee[i].getQuantity(1) + "\r\n" +
-                        this.coffee[i].getPrice(0) + "\r\n" +
-                        this.coffee[i].getPrice(1) + "\r\n" +
-                        this.coffee[i].getImgPath();
-                try{
-                   WriteFile data = new WriteFile(this.data_reference[i]);
-                   data.writeToFile(overwrite);
-                }catch(IOException e){
-                    JOptionPane.showMessageDialog(this, "Error:\n" + e);
-                }
-            }
+        }else{
+            JOptionPane.showMessageDialog(this, "Order is empty\nPlace your order first");
         }
     }//GEN-LAST:event_btn_client_confirmActionPerformed
 
     private void btn_client_cancelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_client_cancelActionPerformed
         // TODO add your handling code here:
-        this.coffee[0].setQuantity(0, this.coffee[0].getQuantity(0) + this.client_order_list[0]);
-        this.coffee[0].setQuantity(1, this.coffee[0].getQuantity(1) + this.client_order_list[1]);
-        this.coffee[1].setQuantity(0, this.coffee[1].getQuantity(0) + this.client_order_list[2]);
-        this.coffee[1].setQuantity(1, this.coffee[1].getQuantity(1) + this.client_order_list[3]);
-        this.coffee[2].setQuantity(0, this.coffee[2].getQuantity(0) + this.client_order_list[4]);
-        this.coffee[2].setQuantity(1, this.coffee[2].getQuantity(1) + this.client_order_list[5]);
-        this.coffee[3].setQuantity(0, this.coffee[3].getQuantity(0) + this.client_order_list[6]);
-        this.coffee[3].setQuantity(1, this.coffee[3].getQuantity(1) + this.client_order_list[7]);
-        this.coffee[4].setQuantity(0, this.coffee[4].getQuantity(0) + this.client_order_list[8]);
-        this.coffee[4].setQuantity(1, this.coffee[4].getQuantity(1) + this.client_order_list[9]);        
-        for(int i=0; i<this.client_order_list.length; i++){
-            this.client_order_list[i] = 0;
-        }
-        for(int i=0; i<tbl_client_receipt.getRowCount(); i++){
-            for(int j=0; j<tbl_client_receipt.getColumnCount(); j++){
-                tbl_client_receipt.setValueAt(null, i, j);
+        boolean empty_order = true;
+        for(int order : this.client_order_list){
+            if(order!=0){
+                empty_order= false;
             }
+        }
+        if(!empty_order){
+            int dialogResult = JOptionPane.showConfirmDialog(null,
+                    "Cancel order?", "Confirm action",
+                    JOptionPane.YES_NO_OPTION);
+            if(dialogResult==JOptionPane.YES_OPTION){
+                this.coffee[0].setQuantity(0, this.coffee[0].getQuantity(0) + this.client_order_list[0]);
+                this.coffee[0].setQuantity(1, this.coffee[0].getQuantity(1) + this.client_order_list[1]);
+                this.coffee[1].setQuantity(0, this.coffee[1].getQuantity(0) + this.client_order_list[2]);
+                this.coffee[1].setQuantity(1, this.coffee[1].getQuantity(1) + this.client_order_list[3]);
+                this.coffee[2].setQuantity(0, this.coffee[2].getQuantity(0) + this.client_order_list[4]);
+                this.coffee[2].setQuantity(1, this.coffee[2].getQuantity(1) + this.client_order_list[5]);
+                this.coffee[3].setQuantity(0, this.coffee[3].getQuantity(0) + this.client_order_list[6]);
+                this.coffee[3].setQuantity(1, this.coffee[3].getQuantity(1) + this.client_order_list[7]);
+                this.coffee[4].setQuantity(0, this.coffee[4].getQuantity(0) + this.client_order_list[8]);
+                this.coffee[4].setQuantity(1, this.coffee[4].getQuantity(1) + this.client_order_list[9]);        
+                for(int i=0; i<this.client_order_list.length; i++){
+                    this.client_order_list[i] = 0;
+                }
+                for(int i=0; i<tbl_client_receipt.getRowCount(); i++){
+                    for(int j=0; j<tbl_client_receipt.getColumnCount(); j++){
+                        tbl_client_receipt.setValueAt(null, i, j);
+                    }
+                }
+                JOptionPane.showMessageDialog(this, "Order cancelled");
+            }
+        }else{
+            JOptionPane.showMessageDialog(this, "Order is empty\nPlace your order first");
         }
     }//GEN-LAST:event_btn_client_cancelActionPerformed
 
@@ -2344,8 +2029,8 @@ public class CoffeeOrder extends javax.swing.JFrame {
 
     private void btn_admin_logoutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_admin_logoutActionPerformed
         // TODO add your handling code here:
-        int dialogResult = JOptionPane.showConfirmDialog(null, "Do you wish to logout?",
-            "Confirm logout", JOptionPane.YES_NO_OPTION);
+        int dialogResult = JOptionPane.showConfirmDialog(null, "Go back to client page?",
+            "Confirm action", JOptionPane.YES_NO_OPTION);
         if(dialogResult==JOptionPane.YES_OPTION){
             pnl_main.removeAll();
             pnl_main.add(pnl_client);
@@ -3275,16 +2960,465 @@ public class CoffeeOrder extends javax.swing.JFrame {
             }
         }
     }//GEN-LAST:event_btn_reprice_c5gActionPerformed
+
+    private void btn_openProgramActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_openProgramActionPerformed
+        // TODO add your handling code here:
+        pnl_main.removeAll();
+        pnl_main.add(pnl_cashier_login);
+        pnl_main.repaint();
+        pnl_main.revalidate();
+        BufferedImage img;
+        try{
+            img = ImageIO.read(new File(this.picture_reference[0]));
+            Image dimg = img.getScaledInstance(lbl_loginBanner.getWidth(),
+                    lbl_loginBanner.getHeight(), Image.SCALE_SMOOTH);
+            ImageIcon imageIcon = new ImageIcon(dimg);
+            lbl_loginBanner.setIcon(imageIcon);
+        }catch(IOException e){
+            JOptionPane.showMessageDialog(this, "Error:\n" + e);
+        }
+    }//GEN-LAST:event_btn_openProgramActionPerformed
+
+    private void btn_mainCashierLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_mainCashierLoginActionPerformed
+        // TODO add your handling code here:
+        if(!pwd_mainCashierPwd.getText().equals("")){
+            for(Cashier user : admin){
+                if(pwd_mainCashierPwd.getText().equals(user.getPassword())){
+                    this.currentUser = user;
+                    JOptionPane.showMessageDialog(this, "Logged in as Cashier " + user.getName());
+                    pwd_mainCashierPwd.setText(null);
+                    pnl_main.removeAll();
+                    pnl_main.add(pnl_admin);
+                    pnl_main.repaint();
+                    pnl_main.revalidate();
+                }
+            }
+        }
+    }//GEN-LAST:event_btn_mainCashierLoginActionPerformed
+
+    private void btn_programDetailsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_programDetailsActionPerformed
+        // TODO add your handling code here:
+        ReadFile file_read = new ReadFile(program_reference);
+        try{
+            String[] aryLines = file_read.OpenFile();
+            String txt_program_details = "";
+            for (String aryLine : aryLines) {
+                txt_program_details += aryLine + '\n';
+            }
+            if(!txt_program_details.equals("")){
+                JOptionPane.showMessageDialog(this, txt_program_details);
+            }else{
+                JOptionPane.showMessageDialog(this, "No details recorded");
+            }
+        }catch(IOException e){
+            JOptionPane.showMessageDialog(this, "Error:\n" + e);
+        }
+    }//GEN-LAST:event_btn_programDetailsActionPerformed
+
+    private void btn_closeProgramActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_closeProgramActionPerformed
+        // TODO add your handling code here:
+        int dialogResult = JOptionPane.showConfirmDialog(null,
+                "Exit program?", "Confirm exit", JOptionPane.YES_NO_OPTION);
+        if(dialogResult==JOptionPane.YES_OPTION){
+            dispose();
+        }
+    }//GEN-LAST:event_btn_closeProgramActionPerformed
+
+    private void btn_clientExitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_clientExitActionPerformed
+        // TODO add your handling code here:
+        int dialogResult = JOptionPane.showConfirmDialog(null,
+                "Exit order page?", "Confirm exit", JOptionPane.YES_NO_OPTION);
+        if(dialogResult==JOptionPane.YES_OPTION){
+            lbl_client_img.setIcon(null);
+            btn_buytall_c1.setEnabled(false);
+            btn_buytall_c2.setEnabled(false);
+            btn_buytall_c3.setEnabled(false);
+            btn_buytall_c4.setEnabled(false);
+            btn_buytall_c5.setEnabled(false);
+            btn_buygrande_c1.setEnabled(false);
+            btn_buygrande_c2.setEnabled(false);
+            btn_buygrande_c3.setEnabled(false);
+            btn_buygrande_c4.setEnabled(false);
+            btn_buygrande_c5.setEnabled(false);
+            this.coffee[0].setQuantity(0, this.coffee[0].getQuantity(0) + this.client_order_list[0]);
+            this.coffee[0].setQuantity(1, this.coffee[0].getQuantity(1) + this.client_order_list[1]);
+            this.coffee[1].setQuantity(0, this.coffee[1].getQuantity(0) + this.client_order_list[2]);
+            this.coffee[1].setQuantity(1, this.coffee[1].getQuantity(1) + this.client_order_list[3]);
+            this.coffee[2].setQuantity(0, this.coffee[2].getQuantity(0) + this.client_order_list[4]);
+            this.coffee[2].setQuantity(1, this.coffee[2].getQuantity(1) + this.client_order_list[5]);
+            this.coffee[3].setQuantity(0, this.coffee[3].getQuantity(0) + this.client_order_list[6]);
+            this.coffee[3].setQuantity(1, this.coffee[3].getQuantity(1) + this.client_order_list[7]);
+            this.coffee[4].setQuantity(0, this.coffee[4].getQuantity(0) + this.client_order_list[8]);
+            this.coffee[4].setQuantity(1, this.coffee[4].getQuantity(1) + this.client_order_list[9]);        
+            for(int i=0; i<this.client_order_list.length; i++){
+                this.client_order_list[i] = 0;
+            }
+            for(int i=0; i<tbl_client_receipt.getRowCount(); i++){
+                for(int j=0; j<tbl_client_receipt.getColumnCount(); j++){
+                    tbl_client_receipt.setValueAt(null, i, j);
+                }
+            }
+            pnl_main.removeAll();
+            pnl_main.add(pnl_cashier_login);
+            pnl_main.repaint();
+            pnl_main.revalidate();
+        }
+    }//GEN-LAST:event_btn_clientExitActionPerformed
+
+    private void btn_exitMainActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_exitMainActionPerformed
+        // TODO add your handling code here:
+        int dialogResult = JOptionPane.showConfirmDialog(null,
+                "Exit login page?", "Confirm exit", JOptionPane.YES_NO_OPTION);
+        if(dialogResult==JOptionPane.YES_OPTION){
+            pwd_mainCashierPwd.setText(null);
+            pnl_main.removeAll();
+            pnl_main.add(pnl_openProgram);
+            pnl_main.repaint();
+            pnl_main.revalidate();
+        }
+    }//GEN-LAST:event_btn_exitMainActionPerformed
+
+    private void btn_show_receiptsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_show_receiptsActionPerformed
+        // TODO add your handling code here:
+        int dialogResult = JOptionPane.showConfirmDialog(null,
+                "Show receipts?", "Confirm action", JOptionPane.YES_NO_OPTION);
+        if(dialogResult==JOptionPane.YES_OPTION){
+            ReadFile file_read = new ReadFile(this.receipt_reference);
+            String text = "";
+            try{
+                String[] aryLines = file_read.OpenFile();
+                for(String aryLine : aryLines){
+                    text += aryLine + "\n";
+                }
+                jTextArea1.setText(text);
+            }catch(IOException e){
+                JOptionPane.showMessageDialog(this, "Error:\n" + e);
+            }
+        }
+    }//GEN-LAST:event_btn_show_receiptsActionPerformed
+
+    private void btn_buygrande_c5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_buygrande_c5ActionPerformed
+        // TODO add your handling code here:
+        if(coffee[4].getQuantity(1)!=0){
+            int dialogResult = JOptionPane.showConfirmDialog(null,
+                "Order Grande Cafè Mocha?", "Confirm order",
+                JOptionPane.YES_NO_OPTION);
+            if(dialogResult==JOptionPane.YES_OPTION){
+                btn_buytall_c5.setEnabled(false);
+                btn_buygrande_c5.setEnabled(false);
+                this.client_order_list[9]++;
+                this.refreshReceipt();
+                coffee[4].setQuantity(1,
+                    coffee[4].getQuantity(1) - this.client_order_list[9]);
+            }
+        }
+        btn_buytall_c5.setEnabled(false);
+        btn_buygrande_c5.setEnabled(false);
+    }//GEN-LAST:event_btn_buygrande_c5ActionPerformed
+
+    private void btn_buytall_c5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_buytall_c5ActionPerformed
+        // TODO add your handling code here:
+        if(coffee[4].getQuantity(0)!=0){
+            int dialogResult = JOptionPane.showConfirmDialog(null,
+                "Order Tall Cafè Mocha?", "Confirm order",
+                JOptionPane.YES_NO_OPTION);
+            if(dialogResult==JOptionPane.YES_OPTION){
+                btn_buytall_c5.setEnabled(false);
+                btn_buygrande_c5.setEnabled(false);
+                this.client_order_list[8]++;
+                this.refreshReceipt();
+                coffee[4].setQuantity(0,
+                    coffee[4].getQuantity(0) - this.client_order_list[8]);
+            }
+        }
+        btn_buytall_c5.setEnabled(false);
+        btn_buygrande_c5.setEnabled(false);
+    }//GEN-LAST:event_btn_buytall_c5ActionPerformed
+
+    private void btn_sel_c5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_sel_c5ActionPerformed
+        // TODO add your handling code here:
+        btn_buytall_c5.setText(Integer.toString(this.coffee[4].getPrice(0)));
+        btn_buygrande_c5.setText(Integer.toString(this.coffee[4].getPrice(1)));
+        if(btn_buytall_c5.isEnabled()){
+            btn_buytall_c5.setEnabled(false);
+            btn_buygrande_c5.setEnabled(false);
+            lbl_client_img.setIcon(null);
+        }else{
+            BufferedImage img;
+            try{
+                img = ImageIO.read(new File(this.coffee[4].getImgPath()));
+                Image dimg = img.getScaledInstance(lbl_client_img.getWidth(),
+                    lbl_client_img.getHeight(), Image.SCALE_SMOOTH);
+                ImageIcon imageIcon = new ImageIcon(dimg);
+                lbl_client_img.setIcon(imageIcon);
+            }catch(IOException e){
+                JOptionPane.showMessageDialog(this, "Error:\n" + e);
+            }
+            btn_buytall_c5.setEnabled(true);
+            btn_buygrande_c5.setEnabled(true);
+        }
+    }//GEN-LAST:event_btn_sel_c5ActionPerformed
+
+    private void btn_buygrande_c4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_buygrande_c4ActionPerformed
+        // TODO add your handling code here:
+        if(coffee[3].getQuantity(1)!=0){
+            int dialogResult = JOptionPane.showConfirmDialog(null,
+                "Order Grande Caramel Latte?", "Confirm order",
+                JOptionPane.YES_NO_OPTION);
+            if(dialogResult==JOptionPane.YES_OPTION){
+                btn_buytall_c4.setEnabled(false);
+                btn_buygrande_c4.setEnabled(false);
+                this.client_order_list[7]++;
+                this.refreshReceipt();
+                coffee[3].setQuantity(1,
+                    coffee[3].getQuantity(1) - this.client_order_list[7]);
+            }
+        }
+        btn_buytall_c4.setEnabled(false);
+        btn_buygrande_c4.setEnabled(false);
+    }//GEN-LAST:event_btn_buygrande_c4ActionPerformed
+
+    private void btn_buytall_c4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_buytall_c4ActionPerformed
+        // TODO add your handling code here:
+        if(coffee[3].getQuantity(0)!=0){
+            int dialogResult = JOptionPane.showConfirmDialog(null,
+                "Order Tall Caramel Latte?","Confirm order",
+                JOptionPane.YES_NO_OPTION);
+            if(dialogResult==JOptionPane.YES_OPTION){
+                btn_buytall_c4.setEnabled(false);
+                btn_buygrande_c4.setEnabled(false);
+                this.client_order_list[6]++;
+                this.refreshReceipt();
+                coffee[3].setQuantity(0,
+                    coffee[3].getQuantity(0) - this.client_order_list[6]);
+            }
+        }
+        btn_buytall_c4.setEnabled(false);
+        btn_buygrande_c4.setEnabled(false);
+    }//GEN-LAST:event_btn_buytall_c4ActionPerformed
+
+    private void btn_sel_c4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_sel_c4ActionPerformed
+        // TODO add your handling code here:
+        btn_buytall_c4.setText(Integer.toString(this.coffee[3].getPrice(0)));
+        btn_buygrande_c4.setText(Integer.toString(this.coffee[3].getPrice(1)));
+        if(btn_buytall_c4.isEnabled()){
+            btn_buytall_c4.setEnabled(false);
+            btn_buygrande_c4.setEnabled(false);
+            lbl_client_img.setIcon(null);
+        }else{
+            BufferedImage img;
+            try{
+                img = ImageIO.read(new File(this.coffee[3].getImgPath()));
+                Image dimg = img.getScaledInstance(lbl_client_img.getWidth(),
+                    lbl_client_img.getHeight(), Image.SCALE_SMOOTH);
+                ImageIcon imageIcon = new ImageIcon(dimg);
+                lbl_client_img.setIcon(imageIcon);
+            }catch(IOException e){
+                JOptionPane.showMessageDialog(this, "Error:\n" + e);
+            }
+            btn_buytall_c4.setEnabled(true);
+            btn_buygrande_c4.setEnabled(true);
+        }
+    }//GEN-LAST:event_btn_sel_c4ActionPerformed
+
+    private void btn_buygrande_c3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_buygrande_c3ActionPerformed
+        // TODO add your handling code here:
+        if(coffee[2].getQuantity(1)!=0){
+            int dialogResult = JOptionPane.showConfirmDialog(null,
+                "Order Grande Cafè Latte?", "Confirm order",
+                JOptionPane.YES_NO_OPTION);
+            if(dialogResult==JOptionPane.YES_OPTION){
+                btn_buytall_c3.setEnabled(false);
+                btn_buygrande_c3.setEnabled(false);
+                this.client_order_list[5]++;
+                this.refreshReceipt();
+                coffee[2].setQuantity(1,
+                    coffee[2].getQuantity(1) - this.client_order_list[5]);
+            }
+        }
+        btn_buytall_c3.setEnabled(false);
+        btn_buygrande_c3.setEnabled(false);
+    }//GEN-LAST:event_btn_buygrande_c3ActionPerformed
+
+    private void btn_buytall_c3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_buytall_c3ActionPerformed
+        // TODO add your handling code here:
+        if(coffee[2].getQuantity(0)!=0){
+            int dialogResult = JOptionPane.showConfirmDialog(null,
+                "Order Tall Cafè Latte?", "Confirm order",
+                JOptionPane.YES_NO_OPTION);
+            if(dialogResult==JOptionPane.YES_OPTION){
+                btn_buytall_c3.setEnabled(false);
+                btn_buygrande_c3.setEnabled(false);
+                this.client_order_list[4]++;
+                this.refreshReceipt();
+                coffee[2].setQuantity(0,
+                    coffee[2].getQuantity(0) - this.client_order_list[4]);
+            }
+        }
+        btn_buytall_c3.setEnabled(false);
+        btn_buygrande_c3.setEnabled(false);
+    }//GEN-LAST:event_btn_buytall_c3ActionPerformed
+
+    private void btn_buygrande_c2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_buygrande_c2ActionPerformed
+        // TODO add your handling code here:
+        if(coffee[1].getQuantity(1)!=0){
+            int dialogResult = JOptionPane.showConfirmDialog(null,
+                "Order Grande Cappuccino?", "Confirm order",
+                JOptionPane.YES_NO_OPTION);
+            if(dialogResult==JOptionPane.YES_OPTION){
+                btn_buytall_c2.setEnabled(false);
+                btn_buygrande_c2.setEnabled(false);
+                this.client_order_list[3]++;
+                this.refreshReceipt();
+                coffee[1].setQuantity(1,
+                    coffee[1].getQuantity(1) - this.client_order_list[3]);
+            }
+        }
+        btn_buytall_c2.setEnabled(false);
+        btn_buygrande_c2.setEnabled(false);
+    }//GEN-LAST:event_btn_buygrande_c2ActionPerformed
+
+    private void btn_buytall_c2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_buytall_c2ActionPerformed
+        // TODO add your handling code here:
+        if(coffee[1].getQuantity(0)!=0){
+            int dialogResult = JOptionPane.showConfirmDialog(null,
+                "Order Tall Cappuccino?", "Confirm order",
+                JOptionPane.YES_NO_OPTION);
+            if(dialogResult==JOptionPane.YES_OPTION){
+                btn_buytall_c2.setEnabled(false);
+                btn_buygrande_c2.setEnabled(false);
+                this.client_order_list[2]++;
+                this.refreshReceipt();
+                coffee[1].setQuantity(0,
+                    coffee[1].getQuantity(0) - this.client_order_list[2]);
+            }
+        }
+        btn_buytall_c2.setEnabled(false);
+        btn_buygrande_c2.setEnabled(false);
+    }//GEN-LAST:event_btn_buytall_c2ActionPerformed
+
+    private void btn_buygrande_c1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_buygrande_c1ActionPerformed
+        // TODO add your handling code here:
+        if(coffee[0].getQuantity(1)!=0){
+            int dialogResult = JOptionPane.showConfirmDialog(null,
+                "Order Grande Cafè Americano?", "Confirm order",
+                JOptionPane.YES_NO_OPTION);
+            if(dialogResult==JOptionPane.YES_OPTION){
+                btn_buytall_c1.setEnabled(false);
+                btn_buygrande_c1.setEnabled(false);
+                this.client_order_list[1]++;
+                this.refreshReceipt();
+                coffee[0].setQuantity(1,
+                    coffee[0].getQuantity(1) - this.client_order_list[1]);
+            }
+        }
+        btn_buytall_c1.setEnabled(false);
+        btn_buygrande_c1.setEnabled(false);
+    }//GEN-LAST:event_btn_buygrande_c1ActionPerformed
+
+    private void btn_buytall_c1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_buytall_c1ActionPerformed
+        // TODO add your handling code here:
+        if(coffee[0].getQuantity(0)!=0){
+            int dialogResult = JOptionPane.showConfirmDialog(null,
+                "Order Tall Cafè Americano?", "Confirm order",
+                JOptionPane.YES_NO_OPTION);
+            if(dialogResult==JOptionPane.YES_OPTION){
+                btn_buytall_c1.setEnabled(false);
+                btn_buygrande_c1.setEnabled(false);
+                this.client_order_list[0]++;
+                this.refreshReceipt();
+                coffee[0].setQuantity(0,
+                    coffee[0].getQuantity(0) - this.client_order_list[0]);
+            }
+        }
+        btn_buytall_c1.setEnabled(false);
+        btn_buygrande_c1.setEnabled(false);
+    }//GEN-LAST:event_btn_buytall_c1ActionPerformed
+
+    private void btn_sel_c3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_sel_c3ActionPerformed
+        // TODO add your handling code here:
+        btn_buytall_c3.setText(Integer.toString(this.coffee[2].getPrice(0)));
+        btn_buygrande_c3.setText(Integer.toString(this.coffee[2].getPrice(1)));
+        if(btn_buytall_c3.isEnabled()){
+            btn_buytall_c3.setEnabled(false);
+            btn_buygrande_c3.setEnabled(false);
+            lbl_client_img.setIcon(null);
+        }else{
+            BufferedImage img;
+            try{
+                img = ImageIO.read(new File(this.coffee[2].getImgPath()));
+                Image dimg = img.getScaledInstance(lbl_client_img.getWidth(),
+                    lbl_client_img.getHeight(), Image.SCALE_SMOOTH);
+                ImageIcon imageIcon = new ImageIcon(dimg);
+                lbl_client_img.setIcon(imageIcon);
+            }catch(IOException e){
+                JOptionPane.showMessageDialog(this, "Error:\n" + e);
+            }
+            btn_buytall_c3.setEnabled(true);
+            btn_buygrande_c3.setEnabled(true);
+        }
+    }//GEN-LAST:event_btn_sel_c3ActionPerformed
+
+    private void btn_sel_c2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_sel_c2ActionPerformed
+        // TODO add your handling code here:
+        btn_buytall_c2.setText(Integer.toString(this.coffee[1].getPrice(0)));
+        btn_buygrande_c2.setText(Integer.toString(this.coffee[1].getPrice(1)));
+        if(btn_buytall_c2.isEnabled()){
+            btn_buytall_c2.setEnabled(false);
+            btn_buygrande_c2.setEnabled(false);
+            lbl_client_img.setIcon(null);
+        }else{
+            BufferedImage img;
+            try{
+                img = ImageIO.read(new File(this.coffee[1].getImgPath()));
+                Image dimg = img.getScaledInstance(lbl_client_img.getWidth(),
+                    lbl_client_img.getHeight(), Image.SCALE_SMOOTH);
+                ImageIcon imageIcon = new ImageIcon(dimg);
+                lbl_client_img.setIcon(imageIcon);
+            }catch(IOException e){
+                JOptionPane.showMessageDialog(this, "Error:\n" + e);
+            }
+            btn_buytall_c2.setEnabled(true);
+            btn_buygrande_c2.setEnabled(true);
+        }
+    }//GEN-LAST:event_btn_sel_c2ActionPerformed
+
+    private void btn_sel_c1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_sel_c1ActionPerformed
+        // TODO add your handling code here:
+        btn_buytall_c1.setText(Integer.toString(this.coffee[0].getPrice(0)));
+        btn_buygrande_c1.setText(Integer.toString(this.coffee[0].getPrice(1)));
+        if(btn_buytall_c1.isEnabled()){
+            btn_buytall_c1.setEnabled(false);
+            btn_buygrande_c1.setEnabled(false);
+            lbl_client_img.setIcon(null);
+        }else{
+            BufferedImage img;
+            try{
+                img = ImageIO.read(new File(this.coffee[0].getImgPath()));
+                Image dimg = img.getScaledInstance(lbl_client_img.getWidth(),
+                    lbl_client_img.getHeight(), Image.SCALE_SMOOTH);
+                ImageIcon imageIcon = new ImageIcon(dimg);
+                lbl_client_img.setIcon(imageIcon);
+            }catch(IOException e){
+                JOptionPane.showMessageDialog(this, "Error:\n" + e);
+            }
+            btn_buytall_c1.setEnabled(true);
+            btn_buygrande_c1.setEnabled(true);
+        }
+    }//GEN-LAST:event_btn_sel_c1ActionPerformed
     private void refreshReceipt(){
         int table_row = 0;
+        int totalPrice = 0;
         for(int i=0; i<this.client_order_list.length; i++){
             if(this.client_order_list[i]>0){
                 tbl_client_receipt.setValueAt(this.client_order_list[i], table_row, 0);
                 tbl_client_receipt.setValueAt(this.returnOrderString(i), table_row, 1);
                 tbl_client_receipt.setValueAt(this.returnOrderPrice(i) * this.client_order_list[i], table_row, 2);
+                totalPrice += this.returnOrderPrice(i) * this.client_order_list[i];
                 table_row++;
             }
         }
+        lbl_totalPrice.setText(Integer.toString(totalPrice));
     }
     
     private String returnOrderString(int order){
@@ -3383,28 +3517,24 @@ public class CoffeeOrder extends javax.swing.JFrame {
     private javax.swing.JButton btn_buygrande_c3;
     private javax.swing.JButton btn_buygrande_c4;
     private javax.swing.JButton btn_buygrande_c5;
-    private javax.swing.JButton btn_buygrande_f1;
-    private javax.swing.JButton btn_buygrande_f2;
-    private javax.swing.JButton btn_buygrande_f3;
-    private javax.swing.JButton btn_buygrande_f4;
-    private javax.swing.JButton btn_buygrande_f5;
-    private javax.swing.JButton btn_buyproject_f1;
-    private javax.swing.JButton btn_buyproject_f2;
-    private javax.swing.JButton btn_buyproject_f3;
-    private javax.swing.JButton btn_buyproject_f4;
-    private javax.swing.JButton btn_buyproject_f5;
     private javax.swing.JButton btn_buytall_c1;
     private javax.swing.JButton btn_buytall_c2;
     private javax.swing.JButton btn_buytall_c3;
     private javax.swing.JButton btn_buytall_c4;
     private javax.swing.JButton btn_buytall_c5;
+    private javax.swing.JButton btn_clientExit;
     private javax.swing.JButton btn_client_cancel;
     private javax.swing.JButton btn_client_confirm;
+    private javax.swing.JButton btn_closeProgram;
+    private javax.swing.JButton btn_exitMain;
     private javax.swing.JButton btn_inv_c1;
     private javax.swing.JButton btn_inv_c2;
     private javax.swing.JButton btn_inv_c3;
     private javax.swing.JButton btn_inv_c4;
     private javax.swing.JButton btn_inv_c5;
+    private javax.swing.JButton btn_mainCashierLogin;
+    private javax.swing.JButton btn_openProgram;
+    private javax.swing.JButton btn_programDetails;
     private javax.swing.JButton btn_reprice_c1g;
     private javax.swing.JButton btn_reprice_c1t;
     private javax.swing.JButton btn_reprice_c2g;
@@ -3430,11 +3560,7 @@ public class CoffeeOrder extends javax.swing.JFrame {
     private javax.swing.JButton btn_sel_c3;
     private javax.swing.JButton btn_sel_c4;
     private javax.swing.JButton btn_sel_c5;
-    private javax.swing.JButton btn_sel_f1;
-    private javax.swing.JButton btn_sel_f2;
-    private javax.swing.JButton btn_sel_f3;
-    private javax.swing.JButton btn_sel_f4;
-    private javax.swing.JButton btn_sel_f5;
+    private javax.swing.JButton btn_show_receipts;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -3448,8 +3574,8 @@ public class CoffeeOrder extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel20;
+    private javax.swing.JLabel jLabel21;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
@@ -3457,14 +3583,18 @@ public class CoffeeOrder extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel9;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JScrollPane jScrollPane3;
+    private javax.swing.JScrollPane jScrollPane4;
     private javax.swing.JTabbedPane jTabbedPane1;
     private javax.swing.JTabbedPane jTabbedPane2;
+    private javax.swing.JTextArea jTextArea1;
     private javax.swing.JLabel lbl_client_img;
     private javax.swing.JLabel lbl_iconInv_c1;
     private javax.swing.JLabel lbl_iconInv_c2;
     private javax.swing.JLabel lbl_iconInv_c3;
     private javax.swing.JLabel lbl_iconInv_c4;
     private javax.swing.JLabel lbl_iconInv_c5;
+    private javax.swing.JLabel lbl_loginBanner;
     private javax.swing.JLabel lbl_price_c1g;
     private javax.swing.JLabel lbl_price_c1t;
     private javax.swing.JLabel lbl_price_c2g;
@@ -3485,15 +3615,19 @@ public class CoffeeOrder extends javax.swing.JFrame {
     private javax.swing.JLabel lbl_stock_c4t;
     private javax.swing.JLabel lbl_stock_c5g;
     private javax.swing.JLabel lbl_stock_c5t;
+    private javax.swing.JLabel lbl_totalPrice;
     private javax.swing.JPanel pnl_admin;
     private javax.swing.JPanel pnl_admin_inventory;
     private javax.swing.JPanel pnl_admin_main;
+    private javax.swing.JPanel pnl_admin_receipt;
+    private javax.swing.JPanel pnl_cashier_login;
     private javax.swing.JPanel pnl_client;
     private javax.swing.JPanel pnl_client_coffee;
-    private javax.swing.JPanel pnl_client_frappe;
     private javax.swing.JPanel pnl_client_receipt;
     private javax.swing.JPanel pnl_main;
+    private javax.swing.JPanel pnl_openProgram;
     private javax.swing.JPasswordField pwd_confirm;
+    private javax.swing.JPasswordField pwd_mainCashierPwd;
     private javax.swing.JPasswordField pwd_new;
     private javax.swing.JPasswordField pwd_old;
     private javax.swing.JSpinner spn_price_c1g;
